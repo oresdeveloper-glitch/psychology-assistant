@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@rollup/pluginutils": "^5.4.0",
+    "@rollup/rollup-win32-x64-msvc": "^4.62.2",
     "framer-motion": "^11.15.0",
     "lucide-react": "^0.468.0",
     "mqtt": "^5.15.1",
