@@ -33,15 +33,23 @@ app.add_middleware(
 app.include_router(router)
 
 GZIP_CACHE = {}
+GZIP_MTIME = {}
 
 def gzip_file(filepath):
-    if filepath in GZIP_CACHE:
-        return GZIP_CACHE[filepath]
+    try:
+        mtime = os.path.getmtime(filepath)
+    except Exception:
+        mtime = 0
+    cached_entry = GZIP_CACHE.get(filepath)
+    cached_mtime = GZIP_MTIME.get(filepath, 0)
+    if cached_entry is not None and mtime == cached_mtime:
+        return cached_entry
     try:
         with open(filepath, "rb") as f:
             data = f.read()
         compressed = gzip.compress(data)
         GZIP_CACHE[filepath] = compressed
+        GZIP_MTIME[filepath] = mtime
         logger.info("Gzipped %s: %d -> %d bytes", filepath, len(data), len(compressed))
         return compressed
     except Exception as e:

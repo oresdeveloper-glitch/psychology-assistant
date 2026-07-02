@@ -5,7 +5,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://e2aa164bbb62e565-41-59-11-156.serveousercontent.com/api/:splat"
+  to = "https://a2a643beee43a65b-41-59-212-29.serveousercontent.com/api/:splat"
   status = 200
 
 [[redirects]]

@@ -10,7 +10,7 @@
 
 IPAddress serverIp(5, 255, 123, 12);
 const int serverPort = 80;
-const char* hostname = "e2aa164bbb62e565-41-59-11-156.serveousercontent.com";
+const char* hostname = "a2a643beee43a65b-41-59-212-29.serveousercontent.com";
 const char* apiPath = "/api/v1/sensor/ingest";
 
 #define SCREEN_WIDTH 128
