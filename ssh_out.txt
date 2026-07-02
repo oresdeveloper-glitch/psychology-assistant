@@ -1,2 +1,0 @@
-[32mForwarding HTTP traffic from https://185fc886b9d713e4-196-249-101-215.serveousercontent.com
-[0m
