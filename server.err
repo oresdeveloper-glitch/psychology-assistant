@@ -1,0 +1,13 @@
+2026-06-13 14:17:35,782 - app.main - INFO - Serving frontend from C:\Users\user\Downloads\KHAIRATY\backend\app\..\..\frontend\dist
+INFO:     Started server process [2608]
+INFO:     Waiting for application startup.
+2026-06-13 14:17:35,806 - app.services.live_mqtt - INFO - Live MQTT + HTTP ingest active
+2026-06-13 14:17:35,811 - app.main - INFO - Psychology Assistant API started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-13 14:17:35,813 - app.services.tcp_server - INFO - TCP server listening on 127.0.0.1:9000
+2026-06-13 14:17:36,431 - app.services.live_mqtt - INFO - Live MQTT connected -> subscribed to yasir/crop/device001/data, khairaty/sensor/esp32_001, khairaty/sensor/+
+2026-06-13 17:00:13,809 - app.services.live_mqtt - WARNING - Live MQTT disconnected: rc=Unspecified error
+2026-06-13 17:00:16,999 - app.services.live_mqtt - INFO - Live MQTT connected -> subscribed to yasir/crop/device001/data, khairaty/sensor/esp32_001, khairaty/sensor/+
+2026-06-13 18:06:26,357 - app.services.live_mqtt - WARNING - Live MQTT disconnected: rc=Unspecified error
+2026-06-13 18:06:30,260 - app.services.live_mqtt - INFO - Live MQTT connected -> subscribed to yasir/crop/device001/data, khairaty/sensor/esp32_001, khairaty/sensor/+

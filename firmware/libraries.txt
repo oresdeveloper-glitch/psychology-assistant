@@ -1,0 +1,7 @@
+DHT sensor library
+PubSubClient
+Adafruit Unified Sensor
+Adafruit GFX Library
+Adafruit SSD1306
+WiFi
+WiFiClientSecure

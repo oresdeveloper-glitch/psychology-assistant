@@ -1,0 +1,68 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { CheckCircle2, XCircle, MessageSquareHeart } from "lucide-react";
+
+export default function VerificationCard({ state }) {
+  const [feedback, setFeedback] = useState(null);
+
+  return (
+    <motion.div
+      layout
+      className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl"
+    >
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+        <div className="flex gap-4">
+          <div className="h-11 w-11 rounded-xl bg-rose-400/10 text-rose-300 flex items-center justify-center">
+            <MessageSquareHeart size={24} />
+          </div>
+
+          <div>
+            <h3 className="text-lg font-bold">User Verification</h3>
+            <p className="text-sm text-slate-400">
+              The system detected your current state as <span className="font-semibold text-white">{state || 'Unknown'}</span>. Is this accurate?
+            </p>
+          </div>
+        </div>
+
+        <div className="flex gap-3">
+          <button
+            onClick={() => setFeedback("yes")}
+            className={`px-5 py-2 rounded-xl font-semibold transition ${
+              feedback === "yes"
+                ? "bg-teal-400 text-slate-950"
+                : "bg-white/10 hover:bg-white/20 text-white"
+            }`}
+          >
+            <span className="flex items-center gap-2">
+              <CheckCircle2 size={18} /> Yes
+            </span>
+          </button>
+
+          <button
+            onClick={() => setFeedback("no")}
+            className={`px-5 py-2 rounded-xl font-semibold transition ${
+              feedback === "no"
+                ? "bg-rose-500 text-white"
+                : "bg-white/10 hover:bg-white/20 text-white"
+            }`}
+          >
+            <span className="flex items-center gap-2">
+              <XCircle size={18} /> No
+            </span>
+          </button>
+        </div>
+      </div>
+
+      {feedback && (
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mt-4 rounded-xl bg-white/10 border border-white/10 p-3 text-sm text-slate-300"
+        >
+          Feedback recorded. This response can later be used to improve model
+          accuracy.
+        </motion.div>
+      )}
+    </motion.div>
+  );
+}
