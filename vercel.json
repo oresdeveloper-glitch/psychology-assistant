@@ -1,8 +1,0 @@
-{
-  "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "frontend/dist",
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://a2a643beee43a65b-41-59-212-29.serveousercontent.com/api/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
