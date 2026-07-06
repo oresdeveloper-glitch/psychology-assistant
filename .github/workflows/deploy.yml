@@ -38,7 +38,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_API_BASE: ${{ vars.VITE_API_BASE || 'https://a2a643beee43a65b-41-59-212-29.serveousercontent.com/api/v1' }}
+          VITE_API_BASE: ${{ vars.VITE_API_BASE || 'https://2f5d85df51fcbe15-41-59-170-27.serveousercontent.com/api/v1' }}
           BASE_URL: /psychology-assistant/
 
       - uses: actions/upload-pages-artifact@v3
