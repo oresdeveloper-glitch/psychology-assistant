@@ -117,11 +117,11 @@ void loop() {
     if (!mqttClient.connected()) { delay(2000); return; }
   }
   static unsigned long lastPub = 0;
-  if (millis() - lastPub > 50) {
+  if (millis() - lastPub > 10) {
     lastPub = millis();
     sendData();
   }
-  delay(10);
+  delay(1);
 }
 
 int calcStress(float t, int hr, int sl) {
