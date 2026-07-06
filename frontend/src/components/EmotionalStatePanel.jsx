@@ -34,55 +34,53 @@ export default function EmotionalStatePanel({
 
   return (
     <motion.div
-      layout
-      whileHover={{ scale: 1.02 }}
-      className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-6 shadow-xl h-full"
+      className="premium-glass rounded-2xl p-6 relative overflow-hidden h-full group"
     >
       <motion.div
-        animate={{ opacity: [0.25, 0.45, 0.25], scale: [1, 1.08, 1] }}
-        transition={{ duration: 3, repeat: Infinity }}
-        className="absolute -right-16 -top-16 h-40 w-40 rounded-full blur-3xl"
+        animate={{ opacity: [0.2, 0.4, 0.2], scale: [1, 1.1, 1] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -right-20 -top-20 h-48 w-48 rounded-full blur-3xl"
         style={{ backgroundColor: accent }}
       />
 
       <div className="relative z-10">
         <div
-          className="h-12 w-12 rounded-xl flex items-center justify-center"
-          style={{ backgroundColor: `${accent}22`, color: accent }}
+          className="h-12 w-12 rounded-xl flex items-center justify-center border"
+          style={{ backgroundColor: `${accent}15`, borderColor: `${accent}25`, color: accent }}
         >
-          <Icon size={26} />
+          <Icon size={24} />
         </div>
 
-        <p className="mt-6 text-sm text-slate-300">Current Emotional State</p>
+        <p className="mt-6 text-xs text-slate-500 font-medium uppercase tracking-wider">Current State</p>
 
-        <h2 className="mt-1 text-4xl font-extrabold" style={{ color: accent }}>
+        <h2 className="mt-1.5 text-3xl sm:text-4xl font-extrabold tracking-tight" style={{ color: accent }}>
           {state}
         </h2>
 
-        <div className="mt-5">
-          <div className="flex justify-between text-sm text-slate-300">
+        <div className="mt-6">
+          <div className="flex justify-between text-xs text-slate-400 mb-1.5">
             <span>Confidence</span>
-            <span>{confidence}%</span>
+            <span className="font-semibold">{confidence}%</span>
           </div>
 
-          <div className="mt-2 h-3 rounded-full bg-white/10 overflow-hidden">
+          <div className="h-2 rounded-full bg-white/5 overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${confidence}%` }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
               className="h-full rounded-full"
-              style={{ backgroundColor: accent }}
+              style={{ backgroundColor: accent, boxShadow: `0 0 8px ${accent}60` }}
             />
           </div>
         </div>
 
-        <div className={`mt-5 rounded-xl border ${riskStyle.border} ${riskStyle.bg} p-3 flex gap-3`}>
-          <AlertTriangle size={20} className={riskStyle.text} />
+        <div className={`mt-5 rounded-xl border ${riskStyle.border} ${riskStyle.bg} p-3.5 flex gap-3 items-start`}>
+          <AlertTriangle size={18} className={`${riskStyle.text} mt-0.5 shrink-0`} />
           <div>
             <p className={`text-sm font-semibold ${riskStyle.text}`}>
               Depression Risk: {risk}
             </p>
-            <p className="text-xs text-slate-300">
+            <p className="text-xs text-slate-400 mt-1 leading-relaxed">
               Continue monitoring trends over time.
             </p>
           </div>

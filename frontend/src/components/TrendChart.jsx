@@ -15,50 +15,56 @@ import { LineChart as ChartIcon } from "lucide-react";
 export default function TrendChart({ data }) {
   return (
     <motion.div
-      layout
-      whileHover={{ scale: 1.01 }}
-      className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl h-full"
+      className="premium-glass rounded-2xl p-5 sm:p-6 h-full"
     >
       <div className="flex items-center justify-between mb-5">
         <div>
-          <h3 className="text-lg font-bold">Emotional Trend</h3>
-          <p className="text-sm text-slate-400">
+          <h3 className="text-base sm:text-lg font-bold bg-gradient-to-r from-indigo-300 to-indigo-100 bg-clip-text text-transparent">Emotional Trend</h3>
+          <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
             Stress/anxiety intensity over time
           </p>
         </div>
 
-        <ChartIcon className="text-indigo-300" />
+        <div className="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
+          <ChartIcon className="w-4 h-4 text-indigo-400" />
+        </div>
       </div>
 
-      <div className="h-72">
+      <div className="h-64 sm:h-72">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={data}>
             <defs>
               <linearGradient id="trendGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#6366F1" stopOpacity={0.55} />
-                <stop offset="95%" stopColor="#6366F1" stopOpacity={0.02} />
+                <stop offset="0%" stopColor="#818CF8" stopOpacity={0.6} />
+                <stop offset="60%" stopColor="#818CF8" stopOpacity={0.15} />
+                <stop offset="100%" stopColor="#818CF8" stopOpacity={0} />
               </linearGradient>
             </defs>
 
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" />
-            <XAxis dataKey="time" stroke="#94A3B8" />
-            <YAxis stroke="#94A3B8" />
+            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
+            <XAxis dataKey="time" stroke="#475569" tick={{ fontSize: 10 }} axisLine={false} tickLine={false} />
+            <YAxis stroke="#475569" tick={{ fontSize: 10 }} axisLine={false} tickLine={false} />
             <Tooltip
               contentStyle={{
-                background: "#0F172A",
-                border: "1px solid rgba(255,255,255,0.12)",
+                background: "rgba(15,23,42,0.95)",
+                border: "1px solid rgba(255,255,255,0.1)",
                 borderRadius: "12px",
                 color: "#fff",
+                fontSize: "12px",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+                backdropFilter: "blur(16px)",
               }}
             />
 
             <Area
               type="monotone"
               dataKey="score"
-              stroke="#6366F1"
-              strokeWidth={3}
+              stroke="#818CF8"
+              strokeWidth={2.5}
               fill="url(#trendGradient)"
               animationDuration={900}
+              dot={{ fill: "#818CF8", r: 2, strokeWidth: 0 }}
+              activeDot={{ fill: "#818CF8", r: 4, strokeWidth: 2, stroke: "#0F172A" }}
             />
           </AreaChart>
         </ResponsiveContainer>

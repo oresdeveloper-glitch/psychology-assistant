@@ -2,6 +2,7 @@ import json
 import logging
 import threading
 import time
+import asyncio
 from collections import deque
 from datetime import datetime
 import paho.mqtt.client as mqtt
@@ -72,12 +73,16 @@ def is_valid_data(data):
 
 def on_message(client, userdata, msg):
     try:
+        if msg.retain:
+            logger.info("Ignoring retained message on %s", msg.topic)
+            return
         data = json.loads(msg.payload.decode())
         data = normalize_data(data)
         if not is_valid_data(data):
             logger.warning("MQTT received invalid data, dropped: %s", data)
             return
         data["_received_at"] = datetime.utcnow().isoformat()
+        data["_stale"] = False
         _state['latest'] = data
         _state['real_data'] = True
         history.append(data)
@@ -105,6 +110,7 @@ def push_data(data):
         return
     if "_received_at" not in data:
         data["_received_at"] = datetime.utcnow().isoformat()
+    data["_stale"] = False
     _state['latest'] = data
     _state['real_data'] = True
     _state['connected'] = True
@@ -136,13 +142,26 @@ def mqtt_thread():
 
 
 def fallback_thread():
+    ever_seen_real = False
+    last_real_ts = 0.0
     while True:
         time.sleep(3)
-        if not has_real_data():
+        now = time.time()
+        latest = _state.get('latest', {})
+        if latest and '_received_at' in latest and not latest.get('_no_data'):
+            if not ever_seen_real:
+                ever_seen_real = True
+            try:
+                last_real_ts = datetime.fromisoformat(latest['_received_at']).timestamp()
+            except Exception:
+                pass
+        if ever_seen_real:
+            _state['latest']['_stale'] = now - last_real_ts > 30
+        else:
             _state['latest'] = {
                 "_no_data": True, "_received_at": datetime.utcnow().isoformat()
             }
-            _state['connected'] = is_connected()
+        _state['connected'] = is_connected()
 
 
 def start_live_mqtt():
@@ -152,3 +171,18 @@ def start_live_mqtt():
     t2.start()
     logger.info("Live MQTT + HTTP ingest active")
     return t1
+
+
+_last_sent_json = [""]
+
+async def stream_latest():
+    while True:
+        latest = _state.get('latest', {})
+        if latest and not latest.get('_no_data'):
+            data = dict(latest)
+            data["_broker_connected"] = _state.get('connected', False)
+            current = json.dumps(data, default=str)
+            if current != _last_sent_json[0]:
+                _last_sent_json[0] = current
+                yield f"data: {current}\n\n"
+        await asyncio.sleep(0.05)

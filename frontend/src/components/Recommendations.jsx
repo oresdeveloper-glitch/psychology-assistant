@@ -8,16 +8,18 @@ export default function Recommendations({ prediction }) {
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      className="glass rounded-2xl p-5"
+      className="premium-glass rounded-2xl p-5"
     >
       <div className="flex items-center gap-2 mb-4">
-        <Lightbulb className="w-4 h-4 text-amber-400" />
-        <h3 className="text-sm font-semibold text-gray-300">Recommendation</h3>
+        <div className="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+          <Lightbulb className="w-4 h-4 text-amber-400" />
+        </div>
+        <h3 className="text-sm font-semibold text-slate-300">Recommendation</h3>
       </div>
 
-      <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/5 mb-3">
-        <Heart className="w-4 h-4 text-calm mt-0.5 shrink-0" />
-        <p className="text-sm text-gray-400 leading-relaxed">{prediction.recommendation}</p>
+      <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] mb-3">
+        <Heart className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
+        <p className="text-sm text-slate-400 leading-relaxed">{prediction.recommendation}</p>
       </div>
 
       <div className="flex items-start gap-3 p-3 rounded-xl bg-red-500/5 border border-red-500/10">

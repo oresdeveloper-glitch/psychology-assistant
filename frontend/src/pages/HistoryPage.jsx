@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
-import { TrendingUp, Clock, Thermometer, HeartPulse, Moon, Activity } from 'lucide-react'
+import { TrendingUp, Clock, Thermometer, HeartPulse, Moon, Activity, History as HistoryIcon } from 'lucide-react'
 import SensorChart from '../charts/SensorChart'
 import { getMqttHistory, healthCheck } from '../services/api'
 
@@ -30,14 +30,19 @@ export default function HistoryPage() {
   useEffect(() => { fetchData(); const i = setInterval(fetchData, 15000); return () => clearInterval(i) }, [fetchData])
 
   return (
-    <main className="min-h-screen text-white font-sans px-6 py-6">
-      <motion.div variants={container} initial="hidden" animate="show" className="max-w-7xl mx-auto space-y-6">
+    <main className="min-h-screen text-white font-sans px-4 sm:px-6 py-4 sm:py-6">
+      <motion.div variants={container} initial="hidden" animate="show" className="max-w-7xl mx-auto space-y-5">
 
         {/* Header */}
-        <motion.div variants={item} className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold tracking-tight">History</h1>
-            <p className="text-sm text-slate-400">Live sensor readings ({readings.length})</p>
+        <motion.div variants={item} className="premium-glass rounded-2xl p-5 sm:p-6 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="w-11 h-11 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
+              <HistoryIcon className="w-5 h-5 text-indigo-400" />
+            </div>
+            <div>
+              <h1 className="text-xl sm:text-2xl font-bold tracking-tight bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">History</h1>
+              <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Live sensor readings ({readings.length})</p>
+            </div>
           </div>
           <Clock className="w-5 h-5 text-slate-500" />
         </motion.div>
@@ -47,25 +52,25 @@ export default function HistoryPage() {
           const last = readings[readings.length - 1]
           return (
             <motion.div variants={item} className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <div className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-4 shadow-xl text-center">
-                <Thermometer className="w-5 h-5 mx-auto mb-1 text-rose-400" />
+              <div className="premium-glass rounded-2xl p-4 text-center">
+                <Thermometer className="w-5 h-5 mx-auto mb-2 text-rose-400" />
                 <p className="text-xs text-slate-500">Temperature</p>
-                <p className="text-lg font-bold text-white">{last.temperature?.toFixed(1)}&deg;C</p>
+                <p className="text-lg font-bold text-white mt-1">{last.temperature?.toFixed(1)}&deg;C</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-4 shadow-xl text-center">
-                <HeartPulse className="w-5 h-5 mx-auto mb-1 text-red-400" />
+              <div className="premium-glass rounded-2xl p-4 text-center">
+                <HeartPulse className="w-5 h-5 mx-auto mb-2 text-red-400" />
                 <p className="text-xs text-slate-500">Heart Rate</p>
-                <p className="text-lg font-bold text-white">{last.heartRate} bpm</p>
+                <p className="text-lg font-bold text-white mt-1">{last.heartRate} bpm</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-4 shadow-xl text-center">
-                <Moon className="w-5 h-5 mx-auto mb-1 text-indigo-400" />
+              <div className="premium-glass rounded-2xl p-4 text-center">
+                <Moon className="w-5 h-5 mx-auto mb-2 text-indigo-400" />
                 <p className="text-xs text-slate-500">Sleep Score</p>
-                <p className="text-lg font-bold text-white">{last.sleepScore}%</p>
+                <p className="text-lg font-bold text-white mt-1">{last.sleepScore}%</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-4 shadow-xl text-center">
-                <Activity className="w-5 h-5 mx-auto mb-1 text-amber-400" />
+              <div className="premium-glass rounded-2xl p-4 text-center">
+                <Activity className="w-5 h-5 mx-auto mb-2 text-amber-400" />
                 <p className="text-xs text-slate-500">Stress Score</p>
-                <p className="text-lg font-bold" style={{ color: STATUS_COLORS[last.currentStatus] || '#94a3b8' }}>{last.stressScore}</p>
+                <p className="text-lg font-bold mt-1" style={{ color: STATUS_COLORS[last.currentStatus] || '#94a3b8' }}>{last.stressScore}</p>
               </div>
             </motion.div>
           )
@@ -80,14 +85,16 @@ export default function HistoryPage() {
         </motion.div>
 
         {/* Full History List */}
-        <motion.div variants={item} className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl">
-          <div className="flex items-center gap-2 mb-4">
-            <TrendingUp className="w-4 h-4 text-slate-500" />
+        <motion.div variants={item} className="premium-glass rounded-2xl p-5 sm:p-6">
+          <div className="flex items-center gap-2 mb-5">
+            <div className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+              <TrendingUp className="w-4 h-4 text-slate-400" />
+            </div>
             <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-500">All Readings</h3>
           </div>
 
           {readings.length === 0 ? (
-            <p className="text-sm text-slate-500 text-center py-8">No sensor readings yet. Ensure your ESP32 is sending data.</p>
+            <p className="text-sm text-slate-500 text-center py-12">No sensor readings yet. Ensure your ESP32 is sending data.</p>
           ) : (
             <div className="space-y-1">
               {[...readings].reverse().map((r, i) => {
@@ -99,9 +106,9 @@ export default function HistoryPage() {
                   <div key={id}>
                     <button
                       onClick={() => setExpanded(isExpanded ? null : id)}
-                      className="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/[0.06] transition-colors text-left border border-transparent hover:border-white/10"
+                      className="w-full flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/[0.04] transition-colors border border-transparent hover:border-white/[0.06]"
                     >
-                      <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: statusColor }} />
+                      <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: statusColor, boxShadow: `0 0 6px ${statusColor}60` }} />
                       <div className="flex-1 min-w-0 flex items-center gap-3">
                         <span className="text-xs font-semibold" style={{ color: statusColor }}>{r.currentStatus || 'N/A'}</span>
                         <span className="text-xs text-slate-500">{r.heartRate}bpm</span>
@@ -109,18 +116,18 @@ export default function HistoryPage() {
                         <span className="text-xs text-slate-500">sleep {r.sleepScore}%</span>
                         <span className="text-xs text-slate-500">stress {r.stressScore}</span>
                       </div>
-                      <span className="text-xs text-slate-500 font-mono shrink-0">{new Date(r._received_at || Date.now()).toLocaleDateString()}</span>
+                      <span className="text-xs text-slate-600 font-mono shrink-0">{new Date(r._received_at || Date.now()).toLocaleDateString()}</span>
                     </button>
                     {isExpanded && (
                       <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} className="px-12 pb-3">
-                        <div className="rounded-xl bg-white/5 border border-white/10 p-4 text-sm space-y-2">
-                          <p className="text-slate-400">Time: <span className="text-white">{time}</span></p>
-                          <p className="text-slate-400">Temperature: <span className="text-white">{r.temperature?.toFixed(1)}&deg;C</span></p>
-                          <p className="text-slate-400">Heart Rate: <span className="text-white">{r.heartRate} bpm</span></p>
-                          <p className="text-slate-400">Sleep Score: <span className="text-white">{r.sleepScore}%</span></p>
-                          <p className="text-slate-400">Stress Score: <span className="text-white">{r.stressScore}</span></p>
-                          <p className="text-slate-400">Status: <span className="text-white" style={{ color: statusColor }}>{r.currentStatus}</span></p>
-                          <p className="text-slate-400">Depression Risk: <span className="text-white" style={{ color: STATUS_COLORS[r.depressionRisk] || '#94a3b8' }}>{r.depressionRisk}</span></p>
+                        <div className="premium-glass-light rounded-xl p-4 text-sm space-y-2">
+                          <p className="text-slate-500">Time: <span className="text-white font-medium">{time}</span></p>
+                          <p className="text-slate-500">Temperature: <span className="text-white font-medium">{r.temperature?.toFixed(1)}&deg;C</span></p>
+                          <p className="text-slate-500">Heart Rate: <span className="text-white font-medium">{r.heartRate} bpm</span></p>
+                          <p className="text-slate-500">Sleep Score: <span className="text-white font-medium">{r.sleepScore}%</span></p>
+                          <p className="text-slate-500">Stress Score: <span className="text-white font-medium">{r.stressScore}</span></p>
+                          <p className="text-slate-500">Status: <span className="font-medium" style={{ color: statusColor }}>{r.currentStatus}</span></p>
+                          <p className="text-slate-500">Depression Risk: <span className="font-medium" style={{ color: STATUS_COLORS[r.depressionRisk] || '#94a3b8' }}>{r.depressionRisk}</span></p>
                         </div>
                       </motion.div>
                     )}

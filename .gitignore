@@ -19,6 +19,21 @@ server.err
 .env
 *.env.local
 .vscode/
+
+# dev scripts
+auto_fix.py
+esp32_emulator.py
+rebuild_all.py
+start_backend.py
+mqtt_simulator.py
+test_kill.py
+test.txt
+run_backend.py
+firmware.ino
+firmware/build/
+src/
+phone_url.txt
+tunnel_url.txt
 .idea/
 .DS_Store
 Thumbs.db

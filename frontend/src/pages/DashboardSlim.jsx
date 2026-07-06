@@ -7,14 +7,14 @@ const C = { rose: '#fb7185', orange: '#fb923c', cyan: '#22d3ee', emerald: '#34d3
 function Card({ title, value, unit, icon: Icon, colorKey, sub }) {
   const color = C[colorKey] || '#94a3b8'
   return (
-    <div className="rounded-xl p-4" style={{background:'rgba(255,255,255,0.06)', backdropFilter:'blur(16px)', border:'1px solid rgba(255,255,255,0.06)'}}>
-      <div className="flex items-center gap-2" style={{color:'#94a3b8', fontSize:'12px', fontWeight:600, textTransform:'uppercase', letterSpacing:'0.05em', marginBottom:'8px'}}>
+    <div className="premium-glass rounded-xl p-4">
+      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
         <Icon className="w-4 h-4" style={{color}} />
         {title}
       </div>
-      <div style={{fontSize:'24px', fontWeight:700, color}}>{value ?? '--'}</div>
-      {unit && <div style={{fontSize:'12px', color:'#64748b', marginTop:'2px'}}>{unit}</div>}
-      {sub && <div style={{fontSize:'12px', color:'#94a3b8', marginTop:'4px'}}>{sub}</div>}
+      <div className="text-2xl font-bold" style={{color}}>{value ?? '--'}</div>
+      {unit && <div className="text-xs text-slate-500 mt-0.5">{unit}</div>}
+      {sub && <div className="text-xs text-slate-400 mt-1">{sub}</div>}
     </div>
   )
 }
@@ -35,15 +35,15 @@ export default function DashboardSlim() {
   }, [])
 
   return (
-    <div className="min-h-screen" style={{background:'#0F172A', color: '#e2e8f0', fontFamily: 'Inter, sans-serif'}}>
+    <div className="min-h-screen app-bg" style={{color: '#e2e8f0', fontFamily: 'Inter, sans-serif'}}>
       <div className="max-w-lg mx-auto px-4 py-6">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h1 className="text-xl font-bold" style={{color:'#e2e8f0'}}>Psychology Assistant</h1>
-            <p className="text-xs" style={{color:'#94a3b8'}}>Mental Wellness Monitor</p>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Psychology Assistant</h1>
+            <p className="text-xs text-slate-500">Mental Wellness Monitor</p>
           </div>
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{background: 'linear-gradient(135deg, #2DD4BF, #10B981)'}}>
-            <Heart className="w-5 h-5" style={{color:'#0F172A'}} />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/20">
+            <Heart className="w-5 h-5 text-white" />
           </div>
         </div>
 
@@ -54,23 +54,23 @@ export default function DashboardSlim() {
           <Card title="Soil Moisture" value={data?.soil_moisture} unit="%" icon={Droplets} colorKey="emerald" />
         </div>
 
-        <div className="rounded-xl p-4 mb-4" style={{background:'rgba(255,255,255,0.06)', backdropFilter:'blur(16px)', border:'1px solid rgba(255,255,255,0.06)'}}>
-          <div className="flex items-center gap-2" style={{color:'#94a3b8', fontSize:'12px', fontWeight:600, textTransform:'uppercase', letterSpacing:'0.05em'}}>
-            <Brain className="w-4 h-4" style={{color:'#a78bfa'}} />
+        <div className="premium-glass rounded-xl p-4 mb-4">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
+            <Brain className="w-4 h-4 text-indigo-400" />
             Mental State
           </div>
-          <div className="text-lg font-bold" style={{color:'#a78bfa'}}>
+          <div className="text-lg font-bold text-indigo-400">
             {data?.currentStatus || data?.stressScore ? 'Monitoring' : 'Awaiting data...'}
           </div>
           {data?.stressScore && (
-            <div className="flex gap-3 mt-2" style={{fontSize:'12px'}}>
-              <span style={{color:'#94a3b8'}}>Stress: <span style={{color:'#fb923c', fontWeight:600}}>{data.stressScore}</span></span>
-              <span style={{color:'#94a3b8'}}>Sleep: <span style={{color:'#818cf8', fontWeight:600}}>{data.sleepScore ?? '--'}</span></span>
+            <div className="flex gap-3 mt-2 text-xs">
+              <span className="text-slate-500">Stress: <span className="text-orange-400 font-semibold">{data.stressScore}</span></span>
+              <span className="text-slate-500">Sleep: <span className="text-indigo-400 font-semibold">{data.sleepScore ?? '--'}</span></span>
             </div>
           )}
         </div>
 
-        <div className="flex items-center gap-2" style={{fontSize:'12px', color:'#64748b'}}>
+        <div className="flex items-center gap-2 text-xs text-slate-600">
           <Activity className="w-3 h-3" />
           Last update: {data?._received_at ? new Date(data._received_at).toLocaleTimeString() : '--'}
         </div>

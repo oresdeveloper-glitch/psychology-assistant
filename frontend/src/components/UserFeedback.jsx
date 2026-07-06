@@ -17,7 +17,7 @@ export default function UserFeedback({ predictedState }) {
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl flex items-center justify-between"
+      className="premium-glass rounded-2xl p-5 flex items-center justify-between"
     >
       <div>
         <p className="text-sm text-slate-300 font-medium">

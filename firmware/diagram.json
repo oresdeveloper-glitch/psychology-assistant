@@ -11,8 +11,8 @@
       "left": 273,
       "attrs": { "humidity": "50", "temperature": "36.5" }
     },
-    { "type": "wokwi-potentiometer", "id": "pot1", "top": 181.1, "left": -38.6, "attrs": {} },
-    { "type": "wokwi-potentiometer", "id": "pot2", "top": -106.9, "left": -38.6, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 181.1, "left": -38.6, "attrs": { "value": "0.83" } },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -106.9, "left": -38.6, "attrs": { "value": "0.20" } },
     {
       "type": "board-ssd1306",
       "id": "oled1",

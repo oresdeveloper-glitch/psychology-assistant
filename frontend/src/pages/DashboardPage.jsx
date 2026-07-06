@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
 import { motion } from 'framer-motion'
 import StatusCards from '../components/StatusCards'
+import Esp32Lcd from '../components/Esp32Lcd'
 import MainStatusPanel from '../components/MainStatusPanel'
 import Recommendations from '../components/Recommendations'
 import SensorChart from '../charts/SensorChart'
@@ -25,6 +26,8 @@ export default function DashboardPage({ onConnectionChange }) {
       stress_score: data.stressScore ?? 0,
       currentStatus: data.currentStatus ?? 'UNKNOWN',
       depressionRisk: data.depressionRisk ?? 'UNKNOWN',
+      _received_at: data._received_at,
+      _broker_connected: data._broker_connected,
       timestamp: data._received_at || new Date().toISOString(),
     }
     setLatestSensor(live)
@@ -63,20 +66,27 @@ export default function DashboardPage({ onConnectionChange }) {
       >
         <div>
           <h2 className="text-lg font-semibold text-white tracking-tight">Dashboard</h2>
-          <p className="text-xs text-gray-600 mt-0.5">
+          <p className="text-xs text-slate-500 mt-0.5">
             {connected ? 'Live monitoring active' : 'Disconnected'}
           </p>
         </div>
         <button
           onClick={fetchAll}
-          className="text-xs px-3.5 py-1.5 rounded-lg glass glass-hover text-gray-400 hover:text-white font-medium transition-colors"
+          className="text-xs px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-400 hover:text-white font-medium transition-colors border border-white/10"
         >
           Refresh
         </button>
       </motion.div>
 
       <StatusCards sensor={latestSensor} />
-      <MainStatusPanel prediction={recommendation} />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <div className="lg:col-span-2">
+          <MainStatusPanel prediction={recommendation} />
+        </div>
+        <div>
+          <Esp32Lcd sensor={latestSensor} />
+        </div>
+      </div>
       <UserFeedback predictedState={recommendation?.predicted_state} />
       <Recommendations prediction={recommendation} />
 
@@ -88,7 +98,7 @@ export default function DashboardPage({ onConnectionChange }) {
       </div>
 
       <footer className="text-center py-4">
-        <p className="text-[10px] text-gray-600 leading-relaxed max-w-xl mx-auto">
+        <p className="text-[10px] text-slate-600 leading-relaxed max-w-xl mx-auto">
           This system provides wellness screening and early emotional-state indicators only. It is not a medical diagnosis tool.
         </p>
       </footer>

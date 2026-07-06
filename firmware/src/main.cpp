@@ -4,14 +4,10 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <DHT.h>
+#include <PubSubClient.h>
 
 #define WIFI_SSID "Wokwi-GUEST"
 #define WIFI_PASS ""
-
-IPAddress serverIp(5, 255, 123, 12);
-const int serverPort = 80;
-const char* hostname = "a2a643beee43a65b-41-59-212-29.serveousercontent.com";
-const char* apiPath = "/api/v1/sensor/ingest";
 
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
@@ -25,7 +21,13 @@ DHT dht(DHTPIN, DHTTYPE);
 #define POT_HEART 34
 #define POT_SLEEP 35
 
-WiFiClient client;
+const char* mqttServer = "broker.emqx.io";
+const int mqttPort = 1883;
+const char* mqttTopic = "khairaty/sensor/esp32";
+const char* clientId = "khairaty_esp32";
+
+WiFiClient wifiClient;
+PubSubClient mqttClient(wifiClient);
 
 int cs(float t, int hr, int sl);
 String cls(int s);
@@ -33,6 +35,7 @@ String rsk(int sl, int hr);
 
 void setup() {
   Serial.begin(115200);
+  randomSeed(analogRead(0));
   dht.begin();
   Wire.begin(21, 22);
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
@@ -57,6 +60,24 @@ void setup() {
     display.println("WiFi OK");
     display.print("IP: "); display.println(WiFi.localIP());
     Serial.print("IP: "); Serial.println(WiFi.localIP());
+
+    mqttClient.setServer(mqttServer, mqttPort);
+    Serial.print("MQTT");
+    int b = 0;
+    while (!mqttClient.connected() && b < 20) {
+      if (mqttClient.connect(clientId)) {
+        Serial.println(" OK");
+        display.println("MQTT OK");
+      } else {
+        Serial.print(".");
+        delay(500);
+        b++;
+      }
+    }
+    if (!mqttClient.connected()) {
+      Serial.println(" FAIL");
+      display.println("MQTT FAIL");
+    }
   } else {
     Serial.print(" FAIL after "); Serial.print(a); Serial.println(" tries");
     display.println("WiFi FAIL");
@@ -73,63 +94,58 @@ void loop() {
     int a = 0;
     while (WiFi.status() != WL_CONNECTED && a < 60) { delay(500); a++; }
     if (WiFi.status() != WL_CONNECTED) {
-      Serial.print("WiFi reconnect FAIL after "); Serial.print(a); Serial.println(" tries");
+      display.clearDisplay(); display.setCursor(0,0);
+      display.println("WiFi FAIL"); display.display();
       delay(2000);
       return;
     }
     Serial.println("WiFi reconnected");
   }
 
+  if (!mqttClient.connected()) {
+    Serial.print("MQTT reconnect");
+    int b = 0;
+    while (!mqttClient.connected() && b < 20) {
+      if (mqttClient.connect(clientId)) {
+        Serial.println(" OK");
+      } else {
+        Serial.print(".");
+        delay(500);
+        b++;
+      }
+    }
+    if (!mqttClient.connected()) {
+      Serial.println(" FAIL");
+      delay(2000);
+      return;
+    }
+  }
+
   float t = dht.readTemperature();
   if (isnan(t)) t = 25.0;
-  int hr = map(analogRead(POT_HEART), 0, 4095, 60, 130);
-  int sl = map(analogRead(POT_SLEEP), 0, 4095, 0, 100);
+
+  int potHeart = analogRead(POT_HEART);
+  int potSleep = analogRead(POT_SLEEP);
+
+  int hr = map(potHeart, 0, 4095, 55, 100);
+  int sl = map(potSleep, 0, 4095, 60, 100);
   int ss = cs(t, hr, sl);
 
-  String body = "{\"temperature\":" + String(t,1) + ",\"heartRate\":" + String(hr) +
-                ",\"sleepScore\":" + String(sl) + ",\"stressScore\":" + String(ss) +
-                ",\"currentStatus\":\"" + cls(ss) +
-                "\",\"depressionRisk\":\"" + rsk(sl, hr) + "\"}";
+  static unsigned long lastPub = 0;
+  if (millis() - lastPub > 50) {
+    lastPub = millis();
 
-  Serial.print("POST len="); Serial.println(body.length());
-  Serial.print("Connecting to "); Serial.print(serverIp); Serial.print(":"); Serial.println(serverPort);
-  int conn = client.connect(serverIp, serverPort, 15000);
-  Serial.print("connect()="); Serial.println(conn);
-  if (conn == 1) {
-    Serial.println("Connected, sending request");
-    client.print("POST "); client.print(apiPath); client.println(" HTTP/1.1");
-    client.print("Host: "); client.println(hostname);
-    client.print("Content-Type: application/json\r\n");
-    client.print("Content-Length: "); client.println(body.length());
-    client.println("Connection: close");
-    client.println();
-    client.print(body);
-    unsigned long timeout = millis() + 10000;
-    while (client.available() == 0 && millis() < timeout) { delay(10); }
-    if (client.available() > 0) {
-      String line = client.readStringUntil('\n');
-      line.trim();
-      bool ok = line.indexOf("200") >= 0;
-      Serial.print("Status: "); Serial.println(line);
-      client.stop();
-      display.clearDisplay();
-      display.setTextSize(1);
-      display.setCursor(0, 0);
-      display.print("T:"); display.print(t,1); display.print(" HR:"); display.println(hr);
-      display.print("Sleep:"); display.print(sl); display.print(" Stress:"); display.println(ss);
-      display.print(cls(ss)); display.print(" "); display.println(rsk(sl, hr));
-      display.setTextSize(2);
-      display.setCursor(0, 48);
-      display.print(ok ? "SENT" : "FAIL");
-      display.display();
-    } else {
-      Serial.println("Response timeout");
-      client.stop();
-    }
-  } else {
-    Serial.println("connect FAIL (timeout)");
+    String payload = "{\"temperature\":" + String(t,1) + ",\"heartRate\":" + String(hr) +
+                     ",\"sleepScore\":" + String(sl) + ",\"stressScore\":" + String(ss) +
+                     ",\"currentStatus\":\"" + cls(ss) +
+                     "\",\"depressionRisk\":\"" + rsk(sl, hr) + "\"}";
+
+    Serial.print("MQTT pub len="); Serial.println(payload.length());
+    bool ok = mqttClient.publish(mqttTopic, payload.c_str());
+    Serial.print("publish()="); Serial.println(ok ? "OK" : "FAIL");
+    mqttClient.loop();
   }
-  Serial.println(conn == 1 ? "POST OK" : "POST FAIL");
+
   display.clearDisplay();
   display.setTextSize(1);
   display.setCursor(0, 0);
@@ -138,10 +154,10 @@ void loop() {
   display.print(cls(ss)); display.print(" "); display.println(rsk(sl, hr));
   display.setTextSize(2);
   display.setCursor(0, 48);
-  display.print(conn == 1 ? "SENT" : "FAIL");
+  display.print("SENT");
   display.display();
 
-  delay(3000);
+  delay(10);
 }
 
 int cs(float t, int hr, int sl) {

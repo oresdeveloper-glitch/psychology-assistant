@@ -75,8 +75,16 @@ if os.path.isdir(FRONTEND_DIR):
                                    "image/svg+xml" if file_path.endswith(".svg") else \
                                    "application/octet-stream"
                     is_html = file_path.endswith(".html")
+                    content = compressed
+                    if is_html:
+                        decoded = gzip.decompress(compressed).decode("utf-8")
+                        head_end = decoded.find("</head>")
+                        if head_end != -1:
+                            script = '<script>(function(){var s=document.querySelector(\'script[src*="/assets/index-"]\');if(!s)return;var m=s.src.match(/index-([^.]+)\\.js/);if(!m)return;var h=m[1];var p=sessionStorage.getItem("_kh");if(p&&p!==h){sessionStorage.removeItem("_kh");location.reload()}else if(!p)sessionStorage.setItem("_kh",h)})();</script>'
+                            decoded = decoded[:head_end] + script + decoded[head_end:]
+                            content = gzip.compress(decoded.encode("utf-8"))
                     return Response(
-                        content=compressed,
+                        content=content,
                         media_type=content_type,
                         headers={
                             "Content-Encoding": "gzip",

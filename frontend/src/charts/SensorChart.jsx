@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const CustomTooltip = ({ active, payload, label }) => {
   if (!active || !payload?.length) return null
   return (
-    <div className="rounded-xl border border-white/10 bg-slate-800/90 backdrop-blur-xl px-3 py-2 shadow-xl text-xs">
+    <div className="premium-glass-light rounded-xl px-3 py-2 text-xs">
       <p className="text-slate-400 mb-0.5">{label}</p>
       <p className="text-white font-semibold">{payload[0].value?.toFixed(1)}</p>
     </div>
@@ -27,7 +27,7 @@ export default function SensorChart({ data, dataKey, label, color = '#06D6A0', d
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay }}
-      className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl"
+      className="premium-glass rounded-2xl p-5"
     >
       <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">{label}</p>
       {chartData.length === 0 ? (
@@ -39,14 +39,14 @@ export default function SensorChart({ data, dataKey, label, color = '#06D6A0', d
           <AreaChart data={chartData}>
             <defs>
               <linearGradient id={`grad-${dataKey}`} x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor={color} stopOpacity={0.2} />
+                <stop offset="0%" stopColor={color} stopOpacity={0.25} />
                 <stop offset="100%" stopColor={color} stopOpacity={0} />
               </linearGradient>
             </defs>
-            <XAxis dataKey="time" tick={{ fontSize: 10, fill: '#94a3b8' }} axisLine={false} tickLine={false} interval="preserveStartEnd" />
-            <YAxis tick={{ fontSize: 10, fill: '#94a3b8' }} axisLine={false} tickLine={false} domain={['auto', 'auto']} width={35} />
+            <XAxis dataKey="time" tick={{ fontSize: 10, fill: '#64748b' }} axisLine={false} tickLine={false} interval="preserveStartEnd" />
+            <YAxis tick={{ fontSize: 10, fill: '#64748b' }} axisLine={false} tickLine={false} domain={['auto', 'auto']} width={35} />
             <Tooltip content={<CustomTooltip />} cursor={false} />
-            <Area type="monotone" dataKey="value" stroke={color} strokeWidth={2} fill={`url(#grad-${dataKey})`} dot={false} activeDot={{ r: 3, fill: color, stroke: '#0F172A', strokeWidth: 2 }} />
+            <Area type="monotone" dataKey="value" stroke={color} strokeWidth={2} fill={`url(#grad-${dataKey})`} dot={false} activeDot={{ r: 3, fill: color, stroke: '#0B1121', strokeWidth: 2 }} />
           </AreaChart>
         </ResponsiveContainer>
       )}

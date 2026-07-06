@@ -136,6 +136,13 @@ def get_mqtt_history():
     return list(mqtt_svc.history)
 
 
+from fastapi.responses import StreamingResponse
+
+@router.get("/mqtt/stream")
+async def mqtt_stream():
+    return StreamingResponse(mqtt_svc.stream_latest(), media_type="text/event-stream")
+
+
 @router.get("/recommendations/live")
 def get_live_recommendations():
     latest = mqtt_svc.get_latest()

@@ -2,11 +2,11 @@ import { motion } from 'framer-motion'
 import { Brain } from 'lucide-react'
 
 const STATE_CONFIG = {
-  CALM: { color: '#06D6A0', glow: 'glow-calm', iconBg: 'bg-calm/10', label: 'Calm' },
-  STRESS: { color: '#F97316', glow: 'glow-stress', iconBg: 'bg-stress/10', label: 'Stress' },
-  ANXIETY: { color: '#EF4444', glow: 'glow-highrisk', iconBg: 'bg-highrisk/10', label: 'Anxiety' },
-  FATIGUE: { color: '#818CF8', glow: 'glow-fatigue', iconBg: 'bg-fatigue/10', label: 'Fatigue' },
-  UNKNOWN: { color: '#64748b', glow: '', iconBg: 'bg-white/5', label: 'Unknown' },
+  CALM: { color: '#06D6A0', glow: 'glow-calm', label: 'Calm' },
+  STRESS: { color: '#F97316', glow: 'glow-stress', label: 'Stress' },
+  ANXIETY: { color: '#EF4444', glow: 'glow-highrisk', label: 'Anxiety' },
+  FATIGUE: { color: '#818CF8', glow: 'glow-fatigue', label: 'Fatigue' },
+  UNKNOWN: { color: '#64748b', glow: '', label: 'Unknown' },
 }
 
 const RISK_CONFIG = {
@@ -28,13 +28,13 @@ export default function MainStatusPanel({ prediction }) {
     <motion.div
       initial={{ opacity: 0, scale: 0.96 }}
       animate={{ opacity: 1, scale: 1 }}
-      className={`rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-6 shadow-xl ${cfg.glow} relative overflow-hidden`}
+      className={`premium-glass rounded-2xl p-6 ${cfg.glow} relative overflow-hidden`}
     >
-      <div className="absolute top-0 right-0 w-64 h-64 opacity-[0.04] rounded-full" style={{ background: `radial-gradient(circle, ${cfg.color}, transparent)` }} />
+      <div className="absolute top-0 right-0 w-72 h-72 opacity-[0.05] rounded-full blur-3xl" style={{ background: `radial-gradient(circle, ${cfg.color}, transparent)` }} />
 
       <div className="relative z-10">
         <div className="flex items-center gap-2 mb-5">
-          <div className={`p-2 rounded-lg ${cfg.iconBg}`}>
+          <div className="p-2 rounded-lg" style={{ backgroundColor: `${cfg.color}15`, border: `1px solid ${cfg.color}25` }}>
             <Brain className="w-4 h-4" style={{ color: cfg.color }} />
           </div>
           <span className="text-xs font-semibold uppercase tracking-widest text-slate-500">

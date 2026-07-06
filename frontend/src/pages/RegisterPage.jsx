@@ -34,50 +34,36 @@ export default function RegisterPage({ onRegister, onSwitchToLogin }) {
         animate="show"
         className="w-full max-w-md"
       >
-        {/* Logo */}
         <motion.div variants={item} className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-400 to-emerald-500 shadow-lg shadow-teal-400/20 mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 shadow-lg shadow-emerald-500/20 mb-4">
             <Heart className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold tracking-tight">Psychology Assistant</h1>
-          <p className="text-slate-400 mt-1">Create your wellness account</p>
+          <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Psychology Assistant</h1>
+          <p className="text-slate-500 mt-1.5 text-sm">Create your wellness account</p>
         </motion.div>
 
-        {/* Form */}
-        <motion.div variants={item} className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-8 shadow-xl">
-          <h2 className="text-xl font-bold mb-6">Create Account</h2>
+        <motion.div variants={item} className="premium-glass rounded-2xl p-8">
+          <h2 className="text-lg font-bold mb-6">Create Account</h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2 block">Full Name</label>
+              <label className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2 block">Full Name</label>
               <div className="relative">
                 <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="John Doe"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-10 pr-4 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-teal-400/50 focus:ring-1 focus:ring-teal-400/20 transition-all"
-                />
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="John Doe" className="premium-input pl-10" />
               </div>
             </div>
 
             <div>
-              <label className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2 block">Email</label>
+              <label className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2 block">Email</label>
               <div className="relative">
                 <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@example.com"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-10 pr-4 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-teal-400/50 focus:ring-1 focus:ring-teal-400/20 transition-all"
-                />
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" className="premium-input pl-10" />
               </div>
             </div>
 
             <div>
-              <label className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2 block">Password</label>
+              <label className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2 block">Password</label>
               <div className="relative">
                 <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
                 <input
@@ -85,29 +71,19 @@ export default function RegisterPage({ onRegister, onSwitchToLogin }) {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="At least 6 characters"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-10 pr-10 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-teal-400/50 focus:ring-1 focus:ring-teal-400/20 transition-all"
+                  className="premium-input pl-10 pr-10"
                 />
-                <button
-                  type="button"
-                  onClick={() => setShowPw(!showPw)}
-                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors"
-                >
+                <button type="button" onClick={() => setShowPw(!showPw)} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 transition-colors">
                   {showPw ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
               </div>
             </div>
 
             <div>
-              <label className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2 block">Confirm Password</label>
+              <label className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2 block">Confirm Password</label>
               <div className="relative">
                 <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                <input
-                  type={showPw ? 'text' : 'password'}
-                  value={confirm}
-                  onChange={(e) => setConfirm(e.target.value)}
-                  placeholder="Repeat your password"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-10 pr-4 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-teal-400/50 focus:ring-1 focus:ring-teal-400/20 transition-all"
-                />
+                <input type={showPw ? 'text' : 'password'} value={confirm} onChange={(e) => setConfirm(e.target.value)} placeholder="Repeat your password" className="premium-input pl-10" />
               </div>
             </div>
 
@@ -117,11 +93,7 @@ export default function RegisterPage({ onRegister, onSwitchToLogin }) {
               </motion.p>
             )}
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-teal-400 to-emerald-500 text-slate-900 font-bold text-sm hover:from-teal-300 hover:to-emerald-400 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
-            >
+            <button type="submit" disabled={loading} className="premium-btn w-full">
               {loading ? (
                 <span className="w-4 h-4 border-2 border-slate-900 border-t-transparent rounded-full animate-spin" />
               ) : (
@@ -133,7 +105,7 @@ export default function RegisterPage({ onRegister, onSwitchToLogin }) {
           <div className="mt-6 text-center">
             <p className="text-sm text-slate-500">
               Already have an account?{' '}
-              <button onClick={onSwitchToLogin} className="text-teal-400 hover:text-teal-300 font-semibold transition-colors">
+              <button onClick={onSwitchToLogin} className="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors">
                 Sign in
               </button>
             </p>
@@ -141,7 +113,7 @@ export default function RegisterPage({ onRegister, onSwitchToLogin }) {
         </motion.div>
 
         <motion.p variants={item} className="text-center text-xs text-slate-600 mt-6">
-          Secure • Private • Wellness monitoring
+          Secure &bull; Private &bull; Wellness monitoring
         </motion.p>
       </motion.div>
     </main>

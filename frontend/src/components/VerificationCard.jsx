@@ -7,13 +7,12 @@ export default function VerificationCard({ state }) {
 
   return (
     <motion.div
-      layout
-      className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl"
+      className="premium-glass rounded-2xl p-5"
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
         <div className="flex gap-4">
-          <div className="h-11 w-11 rounded-xl bg-rose-400/10 text-rose-300 flex items-center justify-center">
-            <MessageSquareHeart size={24} />
+          <div className="h-11 w-11 rounded-xl bg-rose-400/10 text-rose-300 border border-rose-400/20 flex items-center justify-center">
+            <MessageSquareHeart size={22} />
           </div>
 
           <div>
@@ -29,8 +28,8 @@ export default function VerificationCard({ state }) {
             onClick={() => setFeedback("yes")}
             className={`px-5 py-2 rounded-xl font-semibold transition ${
               feedback === "yes"
-                ? "bg-teal-400 text-slate-950"
-                : "bg-white/10 hover:bg-white/20 text-white"
+                ? "bg-gradient-to-r from-emerald-400 to-teal-500 text-slate-950"
+                : "bg-white/10 hover:bg-white/20 text-white border border-white/10"
             }`}
           >
             <span className="flex items-center gap-2">
@@ -43,7 +42,7 @@ export default function VerificationCard({ state }) {
             className={`px-5 py-2 rounded-xl font-semibold transition ${
               feedback === "no"
                 ? "bg-rose-500 text-white"
-                : "bg-white/10 hover:bg-white/20 text-white"
+                : "bg-white/10 hover:bg-white/20 text-white border border-white/10"
             }`}
           >
             <span className="flex items-center gap-2">
@@ -57,10 +56,9 @@ export default function VerificationCard({ state }) {
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-4 rounded-xl bg-white/10 border border-white/10 p-3 text-sm text-slate-300"
+          className="mt-4 premium-glass-light rounded-xl p-3 text-sm text-slate-300"
         >
-          Feedback recorded. This response can later be used to improve model
-          accuracy.
+          Feedback recorded. This response can later be used to improve model accuracy.
         </motion.div>
       )}
     </motion.div>

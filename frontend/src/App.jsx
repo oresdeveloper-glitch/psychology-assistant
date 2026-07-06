@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Navigation from './components/Navigation'
 import Dashboard from './components/Dashboard'
 import SensorsPage from './pages/SensorsPage'
@@ -28,6 +29,12 @@ function loadUser() {
 function saveUser(data) {
   if (data) localStorage.setItem('khairaty_user', JSON.stringify(data))
   else localStorage.removeItem('khairaty_user')
+}
+
+const pageVariants = {
+  initial: { opacity: 0, y: 12 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: 'easeOut' } },
+  exit: { opacity: 0, y: -12, transition: { duration: 0.2 } },
 }
 
 export default function App() {
@@ -70,7 +77,17 @@ export default function App() {
     <div className="min-h-screen app-bg">
       <Navigation active={activeTab} onNavigate={setActiveTab} onLogout={handleLogout} user={user} />
       <div className="pb-14">
-        <Page user={user} onUpdateUser={setUser} />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            <Page user={user} onUpdateUser={setUser} />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   )

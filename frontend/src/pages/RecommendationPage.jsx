@@ -71,31 +71,38 @@ export default function RecommendationPage() {
   useEffect(() => { fetchData(); const i = setInterval(fetchData, 15000); return () => clearInterval(i) }, [fetchData])
 
   return (
-    <main className="min-h-screen text-white font-sans px-6 py-6">
-      <motion.div variants={container} initial="hidden" animate="show" className="max-w-5xl mx-auto space-y-6">
+    <main className="min-h-screen text-white font-sans px-4 sm:px-6 py-4 sm:py-6">
+      <motion.div variants={container} initial="hidden" animate="show" className="max-w-5xl mx-auto space-y-5">
 
         {/* Header */}
-        <motion.div variants={item} className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl flex items-center justify-between">
-          <div>
-            <div className="flex items-center gap-3">
-              <h1 className="text-2xl font-bold tracking-tight">Recommendations</h1>
-              <span className={`w-2 h-2 rounded-full ${connected ? 'bg-emerald-400' : 'bg-red-400'}`} />
+        <motion.div variants={item} className="premium-glass rounded-2xl p-5 sm:p-6 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="w-11 h-11 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+              <Lightbulb className="w-5 h-5 text-amber-400" />
             </div>
-            <p className="text-sm text-slate-400">AI-powered insights based on your live sensor data</p>
+            <div>
+              <div className="flex items-center gap-3">
+                <h1 className="text-xl sm:text-2xl font-bold tracking-tight bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Recommendations</h1>
+                <span className={`w-2 h-2 rounded-full ${connected ? 'bg-emerald-400' : 'bg-red-400'}`} />
+              </div>
+              <p className="text-xs sm:text-sm text-slate-500 mt-0.5">AI-powered insights based on your live sensor data</p>
+            </div>
           </div>
-          <Lightbulb className="w-6 h-6 text-amber-400" />
+          <Lightbulb className="w-5 h-5 text-amber-400/70" />
         </motion.div>
 
         {/* Live Status + AI Recommendation */}
         {recommendation && (
-          <motion.div variants={item} className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl">
+          <motion.div variants={item} className="premium-glass rounded-2xl p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4">
-              <Activity className="w-4 h-4 text-slate-500" />
+              <div className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+                <Activity className="w-4 h-4 text-slate-400" />
+              </div>
               <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-500">Live Analysis</h3>
               <span className="text-[10px] text-slate-600 ml-auto font-mono">Confidence {(recommendation.confidence * 100).toFixed(0)}%</span>
             </div>
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="text-xs font-semibold uppercase tracking-wider">Detected State:</span>
+            <div className="flex flex-wrap items-center gap-3 mb-5">
+              <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">Detected State:</span>
               <span className="px-3 py-1 rounded-full text-xs font-bold border" style={{ backgroundColor: `${mood.color}18`, borderColor: `${mood.color}33`, color: mood.color }}>
                 {activeMood}
               </span>
@@ -104,52 +111,57 @@ export default function RecommendationPage() {
 
             {/* Live Sensor Values */}
             {recommendation.sensor_data && (
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-                <div className="rounded-xl bg-white/[0.04] border border-white/10 p-3 text-center">
-                  <Thermometer className="w-4 h-4 mx-auto mb-1 text-rose-400" />
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+                <div className="premium-glass-light rounded-xl p-3 text-center">
+                  <Thermometer className="w-4 h-4 mx-auto mb-1.5 text-rose-400" />
                   <p className="text-xs text-slate-500">Temp</p>
-                  <p className="text-sm font-bold text-white">{recommendation.sensor_data.temperature?.toFixed(1)}°C</p>
+                  <p className="text-sm font-bold text-white mt-0.5">{recommendation.sensor_data.temperature?.toFixed(1)}°C</p>
                 </div>
-                <div className="rounded-xl bg-white/[0.04] border border-white/10 p-3 text-center">
-                  <HeartPulse className="w-4 h-4 mx-auto mb-1 text-red-400" />
+                <div className="premium-glass-light rounded-xl p-3 text-center">
+                  <HeartPulse className="w-4 h-4 mx-auto mb-1.5 text-red-400" />
                   <p className="text-xs text-slate-500">Heart Rate</p>
-                  <p className="text-sm font-bold text-white">{recommendation.sensor_data.heartRate} bpm</p>
+                  <p className="text-sm font-bold text-white mt-0.5">{recommendation.sensor_data.heartRate} bpm</p>
                 </div>
-                <div className="rounded-xl bg-white/[0.04] border border-white/10 p-3 text-center">
-                  <Moon className="w-4 h-4 mx-auto mb-1 text-indigo-400" />
+                <div className="premium-glass-light rounded-xl p-3 text-center">
+                  <Moon className="w-4 h-4 mx-auto mb-1.5 text-indigo-400" />
                   <p className="text-xs text-slate-500">Sleep</p>
-                  <p className="text-sm font-bold text-white">{recommendation.sensor_data.sleepScore}%</p>
+                  <p className="text-sm font-bold text-white mt-0.5">{recommendation.sensor_data.sleepScore}%</p>
                 </div>
-                <div className="rounded-xl bg-white/[0.04] border border-white/10 p-3 text-center">
-                  <Activity className="w-4 h-4 mx-auto mb-1 text-amber-400" />
+                <div className="premium-glass-light rounded-xl p-3 text-center">
+                  <Activity className="w-4 h-4 mx-auto mb-1.5 text-amber-400" />
                   <p className="text-xs text-slate-500">Stress</p>
-                  <p className="text-sm font-bold text-white">{recommendation.sensor_data.stressScore}</p>
+                  <p className="text-sm font-bold text-white mt-0.5">{recommendation.sensor_data.stressScore}</p>
                 </div>
               </div>
             )}
 
             {recommendation.recommendation && (
-              <div className="rounded-xl bg-white/[0.04] border border-white/10 p-4 flex items-start gap-3 mb-3">
-                <Heart className="w-5 h-5 mt-0.5 shrink-0" style={{ color: mood.color }} />
-                <p className="text-sm text-slate-300 leading-relaxed">{recommendation.recommendation}</p>
+              <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4 flex items-start gap-3 mb-3">
+                <div className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: `${mood.color}18` }}>
+                  <Heart className="w-4 h-4" style={{ color: mood.color }} />
+                </div>
+                <p className="text-sm text-slate-300 leading-relaxed mt-1">{recommendation.recommendation}</p>
               </div>
             )}
 
             {recommendation.medical_warning && (
               <div className="rounded-xl bg-red-500/5 border border-red-500/15 p-4 flex items-start gap-3">
                 <AlertTriangle className="w-5 h-5 text-red-400 mt-0.5 shrink-0" />
-                <p className="text-xs text-red-300/90 leading-relaxed">{recommendation.medical_warning}</p>
+                <p className="text-xs text-red-300/80 leading-relaxed">{recommendation.medical_warning}</p>
               </div>
             )}
           </motion.div>
         )}
 
         {/* Quick Tips by Mood */}
-        <motion.div variants={item} className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl">
-          <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">
-            Quick Tip Based on Your Current State
-          </h3>
-          <div className="rounded-xl bg-white/[0.04] border border-white/10 p-4 flex items-start gap-3">
+        <motion.div variants={item} className="premium-glass rounded-2xl p-5 sm:p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${mood.color}18` }}>
+              <Sparkles className="w-4 h-4" style={{ color: mood.color }} />
+            </div>
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-500">Quick Tip Based on Your Current State</h3>
+          </div>
+          <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4 flex items-start gap-3">
             <Sparkles className="w-5 h-5 mt-0.5 shrink-0" style={{ color: mood.color }} />
             <div>
               <p className="text-sm font-semibold mb-1" style={{ color: mood.color }}>{activeMood}</p>
@@ -160,9 +172,9 @@ export default function RecommendationPage() {
 
         {/* Recommendation Categories */}
         {recommendations.map((cat) => (
-          <motion.div key={cat.category} variants={item} className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 shadow-xl">
+          <motion.div key={cat.category} variants={item} className="premium-glass rounded-2xl p-5 sm:p-6">
             <div className="flex items-center gap-2 mb-4">
-              <div className="p-2 rounded-lg" style={{ backgroundColor: `${cat.color}22` }}>
+              <div className="p-2 rounded-lg" style={{ backgroundColor: `${cat.color}18` }}>
                 <cat.icon className="w-4 h-4" style={{ color: cat.color }} />
               </div>
               <h3 className="text-sm font-bold" style={{ color: cat.color }}>{cat.category}</h3>
@@ -172,11 +184,11 @@ export default function RecommendationPage() {
                 <div key={r.title}>
                   <button
                     onClick={() => setSelected(selected === r.title ? null : r.title)}
-                    className="w-full text-left rounded-xl bg-white/[0.04] border border-white/10 p-4 hover:bg-white/[0.08] transition-all hover:border-white/20"
+                    className="w-full text-left rounded-xl bg-white/[0.03] border border-white/[0.06] p-4 hover:bg-white/[0.06] transition-all hover:border-white/[0.12]"
                   >
                     <div className="flex items-center justify-between mb-2">
                       <r.icon className="w-4 h-4 text-slate-400" />
-                      <span className="text-[10px] text-slate-500 font-mono">{r.time}</span>
+                      <span className="text-[10px] text-slate-600 font-mono">{r.time}</span>
                     </div>
                     <p className="text-sm font-semibold text-white mb-1">{r.title}</p>
                     {selected === r.title && (
@@ -199,9 +211,9 @@ export default function RecommendationPage() {
         )}
 
         {/* Disclaimer */}
-        <motion.div variants={item} className="rounded-xl border border-amber-400/20 bg-amber-400/10 p-4 flex items-start gap-3">
-          <AlertTriangle className="w-5 h-5 text-amber-300 mt-0.5 shrink-0" />
-          <p className="text-xs text-amber-100/80 leading-relaxed">
+        <motion.div variants={item} className="premium-glass-light rounded-xl p-4 flex items-start gap-3">
+          <AlertTriangle className="w-5 h-5 text-amber-400/70 mt-0.5 shrink-0" />
+          <p className="text-xs text-amber-100/70 leading-relaxed">
             These recommendations are for informational purposes only and are not a substitute for professional medical advice, diagnosis, or treatment.
           </p>
         </motion.div>
