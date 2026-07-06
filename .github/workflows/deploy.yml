@@ -34,12 +34,9 @@ jobs:
         run: npm install
 
       - name: Build
-        run: |
-          echo "Node: $(node -v)"
-          echo "Npm: $(npm -v)"
-          ls -la node_modules/.bin/vite 2>/dev/null || echo "no vite bin"
-          npm run build 2>&1
+        run: npm run build
         env:
+          NODE_OPTIONS: --max-old-space-size=4096
           VITE_API_BASE: ${{ vars.VITE_API_BASE || 'https://orresydeveloper11-khairaty-api.hf.space/api/v1' }}
           BASE_URL: /psychology-assistant/
 
