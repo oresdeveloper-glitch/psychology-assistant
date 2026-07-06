@@ -27,22 +27,14 @@ jobs:
         with:
           node-version: 22
 
-      - name: Install dependencies
-        working-directory: frontend
-        run: npm install
-
       - name: Build
         working-directory: frontend
         run: |
-          echo "node $(node -v)"
-          echo "npm $(npm -v)"
-          echo "pwd: $(pwd)"
-          ls node_modules/.bin/vite && echo "vite found" || echo "vite not found"
-          node node_modules/vite/bin/vite.js build
-        env:
-          VITE_API_BASE: ${{ vars.VITE_API_BASE || 'https://orresydeveloper11-khairaty-api.hf.space/api/v1' }}
-          BASE_URL: /psychology-assistant/
-          CI: false
+          npm install 2>&1
+          echo "=== BUILD ==="
+          npx --yes vite build --base /psychology-assistant/ 2>&1 || true
+          echo "=== DIST ==="
+          ls -la dist/ 2>/dev/null || echo "no dist"
 
       - uses: actions/upload-pages-artifact@v3
         with:
