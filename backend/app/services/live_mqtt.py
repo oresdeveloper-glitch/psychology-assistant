@@ -134,11 +134,16 @@ def mqtt_thread():
     client.on_connect = on_connect
     client.on_disconnect = on_disconnect
     client.on_message = on_message
-    try:
-        client.connect_async(MQTT_BROKER, MQTT_PORT, 60)
-        client.loop_forever()
-    except Exception as e:
-        logger.error("Live MQTT connection failed: %s", e)
+    delay = 5
+    while True:
+        try:
+            logger.info("MQTT connecting to %s:%s ...", MQTT_BROKER, MQTT_PORT)
+            client.connect(MQTT_BROKER, MQTT_PORT, 60)
+            client.loop_forever()
+        except Exception as e:
+            logger.warning("MQTT connection failed: %s, retrying in %ds", e, delay)
+        time.sleep(delay)
+        delay = min(delay * 2, 120)
 
 
 def fallback_thread():
