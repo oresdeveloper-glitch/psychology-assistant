@@ -17,9 +17,6 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -31,14 +28,19 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
+        working-directory: frontend
         run: npm install
 
       - name: Build
-        run: npm run build
+        working-directory: frontend
+        run: npx vite build
         env:
-          NODE_OPTIONS: --max-old-space-size=4096
           VITE_API_BASE: ${{ vars.VITE_API_BASE || 'https://orresydeveloper11-khairaty-api.hf.space/api/v1' }}
           BASE_URL: /psychology-assistant/
+
+      - name: List dist
+        working-directory: frontend
+        run: ls -la dist/ 2>/dev/null || echo "no dist"
 
       - uses: actions/upload-pages-artifact@v3
         with:
