@@ -9,8 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@rollup/pluginutils": "^5.4.0",
-    "@rollup/rollup-win32-x64-msvc": "^4.62.2",
     "framer-motion": "^11.15.0",
     "lucide-react": "^0.468.0",
     "mqtt": "^5.15.1",
@@ -19,6 +17,7 @@
     "recharts": "^2.15.0"
   },
   "devDependencies": {
+    "@rollup/pluginutils": "^5.4.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
@@ -26,5 +25,8 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.3"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-win32-x64-msvc": "^4.62.2"
   }
 }
