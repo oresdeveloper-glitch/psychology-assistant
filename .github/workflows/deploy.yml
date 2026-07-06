@@ -15,26 +15,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Build
-        working-directory: frontend
-        run: |
-          npm install 2>&1
-          echo "=== BUILD ==="
-          npx --yes vite build --base /psychology-assistant/ 2>&1 || true
-          echo "=== DIST ==="
-          ls -la dist/ 2>/dev/null || echo "no dist"
 
       - uses: actions/upload-pages-artifact@v3
         with:
