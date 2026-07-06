@@ -14,7 +14,7 @@ from app.schemas.auth_schemas import RegisterRequest, LoginRequest, AuthResponse
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/v1/auth")
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 security = HTTPBearer(auto_error=False)
 
 SECRET_KEY = os.getenv("JWT_SECRET", "khairaty-secret-change-in-production")
