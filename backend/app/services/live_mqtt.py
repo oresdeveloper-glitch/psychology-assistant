@@ -127,21 +127,21 @@ def has_real_data():
 
 
 def mqtt_thread():
-    client = mqtt.Client(
-        client_id="psychology-assistant-live",
-        callback_api_version=mqtt.CallbackAPIVersion.VERSION2,
-    )
-    client.on_connect = on_connect
-    client.on_disconnect = on_disconnect
-    client.on_message = on_message
-    delay = 5
+    delay = 10
     while True:
         try:
+            client = mqtt.Client(
+                client_id="psychology-assistant-live",
+                callback_api_version=mqtt.CallbackAPIVersion.VERSION2,
+            )
+            client.on_connect = on_connect
+            client.on_disconnect = on_disconnect
+            client.on_message = on_message
             logger.info("MQTT connecting to %s:%s ...", MQTT_BROKER, MQTT_PORT)
             client.connect(MQTT_BROKER, MQTT_PORT, 60)
-            client.loop_forever()
+            client.loop_forever(retry_first_connection=False)
         except Exception as e:
-            logger.warning("MQTT connection failed: %s, retrying in %ds", e, delay)
+            logger.warning("MQTT connection error: %s, retrying in %ds", e, delay)
         time.sleep(delay)
         delay = min(delay * 2, 120)
 
