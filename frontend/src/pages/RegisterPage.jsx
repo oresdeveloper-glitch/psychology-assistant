@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { UserPlus, Mail, Lock, User, Eye, EyeOff, Heart } from 'lucide-react'
+import { registerUser } from '../services/api'
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } }
 const item = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }
@@ -21,9 +22,14 @@ export default function RegisterPage({ onRegister, onSwitchToLogin }) {
     if (password !== confirm) { setError('Passwords do not match'); return }
     if (password.length < 6) { setError('Password must be at least 6 characters'); return }
     setLoading(true)
-    await new Promise((r) => setTimeout(r, 800))
-    setLoading(false)
-    onRegister({ name, email })
+    try {
+      const result = await registerUser(name, email, password)
+      onRegister(result)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (

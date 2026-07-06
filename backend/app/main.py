@@ -6,6 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, Response
 
 from app.api.routes import router
+from app.api.auth import router as auth_router
 from app.models.database import engine, Base
 
 logging.basicConfig(
@@ -31,6 +32,7 @@ app.add_middleware(
 )
 
 app.include_router(router)
+app.include_router(auth_router)
 
 GZIP_CACHE = {}
 GZIP_MTIME = {}

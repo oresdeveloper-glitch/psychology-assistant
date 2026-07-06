@@ -9,6 +9,7 @@ import ProfilePage from './pages/ProfilePage'
 import RecommendationPage from './pages/RecommendationPage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
+import { getCurrentUser } from './services/api'
 
 const pages = {
   dashboard: Dashboard,
@@ -17,6 +18,15 @@ const pages = {
   recommendations: RecommendationPage,
   profile: ProfilePage,
   settings: SettingsPage,
+}
+
+function loadToken() {
+  try { return localStorage.getItem('khairaty_token') } catch { return null }
+}
+
+function saveToken(token) {
+  if (token) localStorage.setItem('khairaty_token', token)
+  else localStorage.removeItem('khairaty_token')
 }
 
 function loadUser() {
@@ -39,10 +49,30 @@ const pageVariants = {
 
 export default function App() {
   const [user, setUserState] = useState(loadUser)
+  const [token, setTokenState] = useState(loadToken)
   const [activeTab, setActiveTab] = useState('dashboard')
   const [authPage, setAuthPage] = useState('login')
+  const [verifying, setVerifying] = useState(!!loadToken())
+
+  useEffect(() => {
+    const savedToken = loadToken()
+    if (!savedToken) { setVerifying(false); return }
+    getCurrentUser()
+      .then((userData) => {
+        setUserState(withDefaults(userData))
+        setVerifying(false)
+      })
+      .catch(() => {
+        saveToken(null)
+        saveUser(null)
+        setTokenState(null)
+        setUserState(null)
+        setVerifying(false)
+      })
+  }, [])
 
   const setUser = (data) => { saveUser(data); setUserState(data) }
+  const setToken = (t) => { saveToken(t); setTokenState(t) }
 
   const withDefaults = (data) => ({
     ...data,
@@ -52,9 +82,28 @@ export default function App() {
     bio: data.bio || 'Wellness journey in progress',
   })
 
-  const handleLogin = (data) => setUser(withDefaults(data))
-  const handleRegister = (data) => setUser(withDefaults(data))
-  const handleLogout = () => setUser(null)
+  const handleLogin = (authResult) => {
+    setToken(authResult.token)
+    setUser(withDefaults(authResult.user))
+  }
+
+  const handleRegister = (authResult) => {
+    setToken(authResult.token)
+    setUser(withDefaults(authResult.user))
+  }
+
+  const handleLogout = () => {
+    setToken(null)
+    setUser(null)
+  }
+
+  if (verifying) {
+    return (
+      <div className="min-h-screen app-bg-auth flex items-center justify-center">
+        <span className="w-6 h-6 border-2 border-emerald-400 border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
+  }
 
   if (!user) {
     if (authPage === 'register') {
