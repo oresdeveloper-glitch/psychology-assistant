@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+khairaty.db
+.env
+server.log
+server.err
