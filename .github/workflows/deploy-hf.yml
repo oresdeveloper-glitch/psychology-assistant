@@ -1,0 +1,48 @@
+name: Deploy Frontend to HF Spaces
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'frontend/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install deps
+        working-directory: frontend
+        run: npm install
+
+      - name: Build
+        working-directory: frontend
+        env:
+          VITE_API_BASE: https://orresydeveloper11-khairaty-api.hf.space/api/v1
+        run: npm run build
+
+      - name: Deploy to HF Spaces
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          pip install huggingface-hub
+          python -c "
+          from huggingface_hub import HfApi
+          api = HfApi(token='${{ secrets.HF_TOKEN }}')
+          api.upload_folder(
+            folder_path='frontend/dist',
+            repo_id='ORRESYDEVELOPER11/khairaty-app',
+            repo_type='space',
+            path_in_repo='.',
+            commit_message='Auto-deploy from GitHub Actions',
+          )
+          print('Deployed to HF Spaces!')
+          "
