@@ -60,7 +60,7 @@ def is_valid_data(data):
         stress = first_present(data, "stressScore", "stress_score")
         if t is not None and (t < -20 or t > 80):
             return False
-        if hr is not None and (hr < 30 or hr > 220):
+        if hr is not None and (hr < 0 or hr > 220):
             return False
         if sleep is not None and (sleep < 0 or sleep > 100):
             return False

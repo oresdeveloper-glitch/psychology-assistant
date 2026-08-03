@@ -241,6 +241,7 @@ class Esp32SensorData(BaseModel):
     stressScore: int | None = None
     currentStatus: str | None = None
     depressionRisk: str | None = None
+    ir: int | None = None
 
     # ...and snake_case from others (tolerant ingest)
     heart_rate: int | None = None
@@ -266,6 +267,7 @@ def ingest_sensor_data(data: Esp32SensorData):
         "depressionRisk": raw.get("depressionRisk")
         if "depressionRisk" in raw
         else raw.get("depression_risk"),
+        "ir": raw.get("ir"),
     }
 
     # Basic validation: require at least temperature and heartRate to avoid pushing empty state
