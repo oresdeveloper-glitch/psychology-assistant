@@ -151,7 +151,7 @@ def recommendation_for_score(score):
 
 @router.post("/questionnaires/submit", response_model=QuestionnaireResponse)
 def submit_questionnaire(data: QuestionnaireSubmit, db: Session = Depends(get_db)):
-    total = int(sum(max(0, min(3, int(v))) for v in data.answers.values()))
+    total = int(sum(max(0, min(4, int(v))) for v in data.answers.values()))
     severity = severity_from_score(total)
     recommendation = recommendation_for_severity(severity, total)
     import json as _json
@@ -202,6 +202,10 @@ def get_questionnaire_history(
 def recommendation_for_severity(severity, score):
     if severity == "SEVERE" or score >= 20:
         return "Severe symptoms detected. Contact professional healthcare immediately. If you feel unsafe, reach out for help right now."
+    return _recommendation_for_severity_map(severity)
+
+
+def _recommendation_for_severity_map(severity):
     m = {
         "MINIMAL": "Keep up the great work! Maintain your routine, stay active, and keep your support network close.",
         "MILD": "You're doing okay. Add some mindfulness minutes and regular movement to keep stress low.",
