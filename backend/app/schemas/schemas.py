@@ -88,3 +88,22 @@ class PredictionHistory(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class QuestionnaireSubmit(BaseModel):
+    user_id: str
+    answers: dict  # question_id -> score (0..3)
+    # optional override, otherwise severity is computed from answers
+    note: Optional[str] = None
+
+
+class QuestionnaireResponse(BaseModel):
+    id: int
+    user_id: str
+    timestamp: datetime
+    total_score: int
+    severity: str
+    recommendation: Optional[str] = None
+
+    class Config:
+        from_attributes = True

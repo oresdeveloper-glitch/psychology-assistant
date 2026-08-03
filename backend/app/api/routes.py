@@ -9,6 +9,7 @@ from app.models.database import get_db
 from app.models.models import SensorReading as SensorReadingModel
 from app.models.models import VoiceFeature as VoiceFeatureModel
 from app.models.models import Prediction as PredictionModel
+from app.models.models import Questionnaire as QuestionnaireModel
 from app.schemas.schemas import (
     SensorReading,
     SensorReadingResponse,
@@ -17,6 +18,8 @@ from app.schemas.schemas import (
     FusionRequest,
     PredictionResponse,
     PredictionHistory,
+    QuestionnaireSubmit,
+    QuestionnaireResponse,
 )
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/v1")
@@ -120,6 +123,92 @@ def get_sensor_history(
 @router.get("/health")
 def health_check():
     return {"status": "healthy", "service": "khairaty-api", "version": "1.0.0"}
+
+
+def severity_from_score(score):
+    if score <= 4:
+        return "MINIMAL"
+    if score <= 9:
+        return "MILD"
+    if score <= 14:
+        return "MODERATE"
+    if score <= 19:
+        return "MODERATELY SEVERE"
+    return "SEVERE"
+
+
+def recommendation_for_score(score):
+    if score <= 4:
+        return "Your responses indicate minimal symptoms. Keep maintaining healthy habits: regular exercise, good sleep and social connection."
+    if score <= 9:
+        return "Mild symptoms detected. Consider mindfulness exercises, regular physical activity, and monitoring your mood for a week."
+    if score <= 14:
+        return "Moderate symptoms. We recommend structured coping strategies, a sleep routine, and consider speaking with a counselor."
+    if score <= 19:
+        return "Moderately severe symptoms. It is strongly recommended to seek professional support and talk to someone you trust."
+    return "Severe symptoms detected. Please seek professional mental health care and contact emergency services if you feel unsafe."
+
+
+@router.post("/questionnaires/submit", response_model=QuestionnaireResponse)
+def submit_questionnaire(data: QuestionnaireSubmit, db: Session = Depends(get_db)):
+    total = int(sum(max(0, min(3, int(v))) for v in data.answers.values()))
+    severity = severity_from_score(total)
+    recommendation = recommendation_for_severity(severity, total)
+    import json as _json
+    record = QuestionnaireModel(
+        user_id=data.user_id,
+        timestamp=datetime.utcnow().isoformat(),
+        total_score=total,
+        severity=severity,
+        answers_json=_json.dumps({str(k): int(v) for k, v in data.answers.items()}),
+        recommendation=recommendation,
+    )
+    db.add(record)
+    db.commit()
+    db.refresh(record)
+    logger.info("Questionnaire submitted for %s: score=%s severity=%s", data.user_id, total, severity)
+    return record
+
+
+@router.get("/questionnaires/latest/{user_id}", response_model=QuestionnaireResponse)
+def get_latest_questionnaire(user_id: str, db: Session = Depends(get_db)):
+    record = (
+        db.query(QuestionnaireModel)
+        .filter(QuestionnaireModel.user_id == user_id)
+        .order_by(QuestionnaireModel.timestamp.desc())
+        .first()
+    )
+    if record is None:
+        raise HTTPException(status_code=404, detail="No questionnaire responses found")
+    return record
+
+
+@router.get("/questionnaires/{user_id}", response_model=List[QuestionnaireResponse])
+def get_questionnaire_history(
+    user_id: str,
+    limit: int = Query(default=20, ge=1, le=100),
+    db: Session = Depends(get_db),
+):
+    records = (
+        db.query(QuestionnaireModel)
+        .filter(QuestionnaireModel.user_id == user_id)
+        .order_by(QuestionnaireModel.timestamp.desc())
+        .limit(limit)
+        .all()
+    )
+    return records
+
+
+def recommendation_for_severity(severity, score):
+    if severity == "SEVERE" or score >= 20:
+        return "Severe symptoms detected. Contact professional healthcare immediately. If you feel unsafe, reach out for help right now."
+    m = {
+        "MINIMAL": "Keep up the great work! Maintain your routine, stay active, and keep your support network close.",
+        "MILD": "You're doing okay. Add some mindfulness minutes and regular movement to keep stress low.",
+        "MODERATE": "A structured plan would help. Prioritize 7-8h sleep, daily movement, and reach out to a support person.",
+        "MODERATELY SEVERE": "Please consider speaking with a mental health professional. Use our recommendations and stay connected.",
+    }
+    return m.get(severity, "Stay connected and monitor your wellbeing.")
 
 
 import app.services.live_mqtt as mqtt_svc

@@ -7,6 +7,7 @@ import HistoryPage from './pages/HistoryPage'
 import SettingsPage from './pages/SettingsPage'
 import ProfilePage from './pages/ProfilePage'
 import RecommendationPage from './pages/RecommendationPage'
+import QuestionnairePage from './pages/QuestionnairePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import { getCurrentUser } from './services/api'
@@ -15,6 +16,7 @@ const pages = {
   dashboard: Dashboard,
   sensors: SensorsPage,
   history: HistoryPage,
+  questionnaires: QuestionnairePage,
   recommendations: RecommendationPage,
   profile: ProfilePage,
   settings: SettingsPage,

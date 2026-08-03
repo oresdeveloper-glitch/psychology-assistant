@@ -62,3 +62,15 @@ class Prediction(Base):
     depression_risk = Column(String(50), nullable=False)
     recommendation = Column(Text, nullable=False)
     model_version = Column(String(50), default="v1.0")
+
+
+class Questionnaire(Base):
+    __tablename__ = "questionnaires"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(String(100), nullable=False, index=True)
+    timestamp = Column(String(50), nullable=False)
+    total_score = Column(Integer, nullable=False)
+    severity = Column(String(50), nullable=False)
+    answers_json = Column(Text, nullable=False)  # JSON of question->score
+    recommendation = Column(Text, nullable=True)

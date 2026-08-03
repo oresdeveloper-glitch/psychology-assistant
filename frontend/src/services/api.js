@@ -110,3 +110,26 @@ export async function getLiveRecommendations() {
   if (!res.ok) throw new Error(`HTTP ${res.status}`)
   return res.json()
 }
+
+export async function submitQuestionnaire(userId, answers) {
+  const res = await fetch(`${API_BASE}/questionnaires/submit`, {
+    method: 'POST',
+    headers: authHeaders(),
+    body: JSON.stringify({ user_id: userId, answers }),
+  })
+  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  return res.json()
+}
+
+export async function getLatestQuestionnaire(userId) {
+  const res = await fetch(`${API_BASE}/questionnaires/latest/${userId}`, { headers: authHeaders() })
+  if (res.status === 404) return null
+  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  return res.json()
+}
+
+export async function getQuestionnaireHistory(userId, limit = 10) {
+  const res = await fetch(`${API_BASE}/questionnaires/${userId}?limit=${limit}`, { headers: authHeaders() })
+  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  return res.json()
+}

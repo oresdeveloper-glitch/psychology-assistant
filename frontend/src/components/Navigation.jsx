@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {
   LayoutDashboard, Activity, History, Lightbulb, Settings,
-  LogOut, ChevronRight, User, Menu, X,
+  LogOut, ChevronRight, User, Menu, X, ClipboardList,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -9,6 +9,7 @@ const sidebarItems = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, desc: 'Overview' },
   { id: 'sensors', label: 'Sensors', icon: Activity, desc: 'Live readings' },
   { id: 'history', label: 'History', icon: History, desc: 'Past records' },
+  { id: 'questionnaires', label: 'Questionnaires', icon: ClipboardList, desc: 'PHQ-9 screening' },
   { id: 'recommendations', label: 'Recommendations', icon: Lightbulb, desc: 'Wellness tips' },
   { id: 'profile', label: 'Profile', icon: User, desc: 'My account' },
   { id: 'settings', label: 'Settings', icon: Settings, desc: 'Configuration' },
@@ -20,8 +21,9 @@ const iconColors = {
   dashboard: { from: '#06D6A0', to: '#05B589', glow: 'rgba(6,214,160,0.35)' },
   sensors: { from: '#F97316', to: '#EA580C', glow: 'rgba(249,115,22,0.35)' },
   history: { from: '#818CF8', to: '#6366F1', glow: 'rgba(129,140,248,0.35)' },
+  questionnaires: { from: '#A78BFA', to: '#8B5CF6', glow: 'rgba(167,139,250,0.35)' },
   recommendations: { from: '#FBBF24', to: '#F59E0B', glow: 'rgba(251,191,36,0.35)' },
-  profile: { from: '#A78BFA', to: '#8B5CF6', glow: 'rgba(167,139,250,0.35)' },
+  profile: { from: '#818CF8', to: '#8B5CF6', glow: 'rgba(129,140,248,0.35)' },
   settings: { from: '#94A3B8', to: '#64748B', glow: 'rgba(148,163,184,0.25)' },
 }
 

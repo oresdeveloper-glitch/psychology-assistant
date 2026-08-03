@@ -38,3 +38,4 @@ tunnel_url.txt
 .DS_Store
 Thumbs.db
 *.log
+*.log.err
