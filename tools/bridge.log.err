@@ -1,0 +1,615 @@
+2026-08-03 19:07:34,058 INFO Opening COM12 @ 115200
+2026-08-03 19:07:37,073 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:07:39,434 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 738, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:07:41,565 INFO sent  {"temperature": 42.43, "heartRate": 0, "ir": 736, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:07:44,049 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:07:46,494 INFO sent  {"temperature": 42.38, "heartRate": 0, "ir": 736, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:07:48,670 INFO sent  {"temperature": 42.55, "heartRate": 0, "ir": 765, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:07:50,903 INFO sent  {"temperature": 42.55, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:07:53,470 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 738, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:07:56,323 INFO sent  {"temperature": 43.17, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:07:58,172 INFO sent  {"temperature": 43.05, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:00,421 INFO sent  {"temperature": 42.88, "heartRate": 0, "ir": 762, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:02,571 INFO sent  {"temperature": 42.97, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:05,034 INFO sent  {"temperature": 42.77, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:07,385 INFO sent  {"temperature": 42.94, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:09,841 INFO sent  {"temperature": 42.55, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:12,196 INFO sent  {"temperature": 42.6, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:14,143 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 729, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:16,185 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:18,443 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:20,486 INFO sent  {"temperature": 42.88, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:22,739 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:25,099 INFO sent  {"temperature": 42.6, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:27,354 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:29,399 INFO sent  {"temperature": 42.8, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:31,286 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 742, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:33,188 INFO sent  {"temperature": 42.88, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:35,643 INFO sent  {"temperature": 42.57, "heartRate": 0, "ir": 741, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:37,782 INFO sent  {"temperature": 42.41, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:39,740 INFO sent  {"temperature": 42.6, "heartRate": 0, "ir": 744, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:41,685 INFO sent  {"temperature": 42.46, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:43,938 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:45,765 INFO sent  {"temperature": 42.49, "heartRate": 0, "ir": 742, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:47,955 INFO sent  {"temperature": 42.57, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:50,367 INFO sent  {"temperature": 42.43, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:52,435 INFO sent  {"temperature": 42.6, "heartRate": 0, "ir": 764, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:54,484 INFO sent  {"temperature": 42.57, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:56,429 INFO sent  {"temperature": 42.66, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:08:58,477 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:00,320 INFO sent  {"temperature": 43.0, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:02,061 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:04,108 INFO sent  {"temperature": 42.8, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:05,850 INFO sent  {"temperature": 42.74, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:07,488 INFO sent  {"temperature": 42.77, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:09,126 INFO sent  {"temperature": 42.83, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:11,071 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 729, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:13,100 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:15,167 INFO sent  {"temperature": 42.6, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:17,113 INFO sent  {"temperature": 42.55, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:18,752 INFO sent  {"temperature": 42.6, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:20,492 INFO sent  {"temperature": 42.77, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:22,418 INFO sent  {"temperature": 42.57, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:24,486 INFO sent  {"temperature": 42.27, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:26,328 INFO sent  {"temperature": 42.57, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:28,277 INFO sent  {"temperature": 42.57, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:30,016 INFO sent  {"temperature": 42.66, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:31,756 INFO sent  {"temperature": 42.32, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:33,421 INFO sent  {"temperature": 42.27, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:35,423 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:37,205 INFO sent  {"temperature": 42.66, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:39,027 INFO sent  {"temperature": 42.83, "heartRate": 0, "ir": 746, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:40,768 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:42,815 INFO sent  {"temperature": 42.83, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:44,761 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 745, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:46,604 INFO sent  {"temperature": 42.6, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:48,427 INFO sent  {"temperature": 42.6, "heartRate": 0, "ir": 740, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:50,168 INFO sent  {"temperature": 42.57, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:51,826 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 746, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:53,771 INFO sent  {"temperature": 42.63, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:55,819 INFO sent  {"temperature": 42.35, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:57,663 INFO sent  {"temperature": 41.74, "heartRate": 0, "ir": 769, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:09:59,403 INFO sent  {"temperature": 42.49, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:01,349 INFO sent  {"temperature": 42.21, "heartRate": 0, "ir": 775, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:03,294 INFO sent  {"temperature": 41.63, "heartRate": 0, "ir": 762, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:04,933 INFO sent  {"temperature": 40.75, "heartRate": 0, "ir": 768, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:06,673 INFO sent  {"temperature": 41.21, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:08,414 INFO sent  {"temperature": 40.02, "heartRate": 0, "ir": 765, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:10,360 INFO sent  {"temperature": 39.89, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:12,108 INFO sent  {"temperature": 39.86, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:13,944 INFO sent  {"temperature": 39.51, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:15,889 INFO sent  {"temperature": 39.2, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:18,040 INFO sent  {"temperature": 38.96, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:19,883 INFO sent  {"temperature": 38.54, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:21,931 INFO sent  {"temperature": 39.07, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:23,701 INFO sent  {"temperature": 38.83, "heartRate": 0, "ir": 766, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:25,617 INFO sent  {"temperature": 38.96, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:27,460 INFO sent  {"temperature": 39.38, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:29,203 INFO sent  {"temperature": 39.43, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:30,942 INFO sent  {"temperature": 39.54, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:32,683 INFO sent  {"temperature": 39.57, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:34,628 INFO sent  {"temperature": 39.46, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:36,471 INFO sent  {"temperature": 39.51, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:38,212 INFO sent  {"temperature": 39.46, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:40,157 INFO sent  {"temperature": 40.37, "heartRate": 0, "ir": 765, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:42,001 INFO sent  {"temperature": 39.49, "heartRate": 0, "ir": 765, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:44,048 INFO sent  {"temperature": 39.7, "heartRate": 0, "ir": 765, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:46,590 INFO sent  {"temperature": 39.59, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:48,789 INFO sent  {"temperature": 39.83, "heartRate": 0, "ir": 763, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:50,502 INFO sent  {"temperature": 39.89, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:52,367 INFO sent  {"temperature": 40.02, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:54,494 INFO sent  {"temperature": 39.94, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:56,644 INFO sent  {"temperature": 39.78, "heartRate": 0, "ir": 764, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:10:58,794 INFO sent  {"temperature": 39.75, "heartRate": 0, "ir": 764, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:00,852 INFO sent  {"temperature": 39.89, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:02,992 INFO sent  {"temperature": 39.86, "heartRate": 0, "ir": 768, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:05,042 INFO sent  {"temperature": 39.43, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:07,191 INFO sent  {"temperature": 39.86, "heartRate": 0, "ir": 791, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:09,117 INFO sent  {"temperature": 40.26, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:11,286 INFO sent  {"temperature": 40.32, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:13,437 INFO sent  {"temperature": 40.13, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:15,591 INFO sent  {"temperature": 40.72, "heartRate": 0, "ir": 762, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:17,635 INFO sent  {"temperature": 40.75, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:19,683 INFO sent  {"temperature": 40.61, "heartRate": 0, "ir": 743, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:21,731 INFO sent  {"temperature": 40.78, "heartRate": 0, "ir": 742, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:23,887 INFO sent  {"temperature": 40.75, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:26,032 INFO sent  {"temperature": 40.75, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:28,182 INFO sent  {"temperature": 40.78, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:30,332 INFO sent  {"temperature": 40.86, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:32,485 INFO sent  {"temperature": 40.8, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:34,634 INFO sent  {"temperature": 40.99, "heartRate": 0, "ir": 745, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:36,784 INFO sent  {"temperature": 41.24, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:38,934 INFO sent  {"temperature": 40.94, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:41,084 INFO sent  {"temperature": 40.94, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:43,113 INFO sent  {"temperature": 40.99, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:45,283 INFO sent  {"temperature": 41.32, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:47,433 INFO sent  {"temperature": 41.32, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:49,583 INFO sent  {"temperature": 41.16, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:51,530 INFO sent  {"temperature": 41.16, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:53,577 INFO sent  {"temperature": 41.32, "heartRate": 0, "ir": 740, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:55,727 INFO sent  {"temperature": 41.49, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:57,810 INFO sent  {"temperature": 41.21, "heartRate": 0, "ir": 738, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:11:59,721 INFO sent  {"temperature": 41.63, "heartRate": 0, "ir": 764, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:01,769 INFO sent  {"temperature": 41.6, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:03,820 INFO sent  {"temperature": 41.71, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:05,865 INFO sent  {"temperature": 41.63, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:08,015 INFO sent  {"temperature": 41.65, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:10,166 INFO sent  {"temperature": 41.49, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:12,315 INFO sent  {"temperature": 41.54, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:14,468 INFO sent  {"temperature": 41.6, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:16,514 INFO sent  {"temperature": 41.76, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:18,664 INFO sent  {"temperature": 41.74, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:20,815 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:23,179 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:25,218 INFO sent  {"temperature": 42.01, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:27,368 INFO sent  {"temperature": 41.93, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:29,518 INFO sent  {"temperature": 42.35, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:31,664 INFO sent  {"temperature": 42.15, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:33,800 INFO sent  {"temperature": 42.21, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:35,970 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:37,896 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:40,067 INFO sent  {"temperature": 42.27, "heartRate": 0, "ir": 741, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:42,216 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:44,367 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:46,517 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:48,564 INFO sent  {"temperature": 41.9, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:50,612 INFO sent  {"temperature": 41.63, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:52,763 INFO sent  {"temperature": 41.85, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:54,913 INFO sent  {"temperature": 41.99, "heartRate": 0, "ir": 742, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:57,064 INFO sent  {"temperature": 41.79, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:12:59,214 INFO sent  {"temperature": 41.74, "heartRate": 0, "ir": 763, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:01,364 INFO sent  {"temperature": 42.27, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:03,414 INFO sent  {"temperature": 42.32, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:05,563 INFO sent  {"temperature": 42.24, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:07,694 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:09,967 INFO sent  {"temperature": 42.21, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:12,107 INFO sent  {"temperature": 42.1, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:14,062 INFO sent  {"temperature": 42.1, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:16,212 INFO sent  {"temperature": 42.21, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:18,157 INFO sent  {"temperature": 42.13, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:20,202 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:22,341 INFO sent  {"temperature": 42.24, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:24,506 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 739, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:26,657 INFO sent  {"temperature": 42.35, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:28,602 INFO sent  {"temperature": 42.21, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:30,650 INFO sent  {"temperature": 42.15, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:32,697 INFO sent  {"temperature": 42.46, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:34,848 INFO sent  {"temperature": 42.01, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:36,999 INFO sent  {"temperature": 42.43, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:39,149 INFO sent  {"temperature": 42.13, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:41,299 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:43,450 INFO sent  {"temperature": 42.13, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:45,600 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:47,751 INFO sent  {"temperature": 41.93, "heartRate": 0, "ir": 744, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:49,881 INFO sent  {"temperature": 42.01, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:52,071 INFO sent  {"temperature": 42.01, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:54,099 INFO sent  {"temperature": 43.0, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:56,250 INFO sent  {"temperature": 42.01, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:13:58,399 INFO sent  {"temperature": 41.71, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:00,550 INFO sent  {"temperature": 42.01, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:02,598 INFO sent  {"temperature": 41.76, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:04,646 INFO sent  {"temperature": 41.9, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:06,717 INFO sent  {"temperature": 41.82, "heartRate": 0, "ir": 740, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:08,825 INFO sent  {"temperature": 41.9, "heartRate": 0, "ir": 745, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:10,995 INFO sent  {"temperature": 41.6, "heartRate": 0, "ir": 745, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:13,145 INFO sent  {"temperature": 42.1, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:15,297 INFO sent  {"temperature": 41.93, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:17,446 INFO sent  {"temperature": 42.15, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:19,494 INFO sent  {"temperature": 41.76, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:21,644 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:23,692 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:25,842 INFO sent  {"temperature": 42.01, "heartRate": 0, "ir": 763, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:27,890 INFO sent  {"temperature": 41.68, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:30,041 INFO sent  {"temperature": 42.43, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:32,178 INFO sent  {"temperature": 41.99, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:34,341 INFO sent  {"temperature": 41.93, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:36,492 INFO sent  {"temperature": 41.79, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:38,540 INFO sent  {"temperature": 41.71, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:40,690 INFO sent  {"temperature": 41.9, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:42,738 INFO sent  {"temperature": 41.46, "heartRate": 0, "ir": 745, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:44,991 INFO sent  {"temperature": 41.46, "heartRate": 0, "ir": 737, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:47,141 INFO sent  {"temperature": 41.76, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:49,291 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 772, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:51,442 INFO sent  {"temperature": 41.6, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:53,407 INFO sent  {"temperature": 41.74, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:55,435 INFO sent  {"temperature": 41.85, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:57,203 INFO sent  {"temperature": 41.99, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:14:59,327 INFO sent  {"temperature": 41.68, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:01,477 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:03,627 INFO sent  {"temperature": 42.21, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:05,777 INFO sent  {"temperature": 41.82, "heartRate": 0, "ir": 745, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:07,825 INFO sent  {"temperature": 41.76, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:09,873 INFO sent  {"temperature": 42.35, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:12,126 INFO sent  {"temperature": 41.65, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:14,276 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:16,324 INFO sent  {"temperature": 41.63, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:18,354 INFO sent  {"temperature": 41.99, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:20,605 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:22,775 INFO sent  {"temperature": 41.93, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:24,926 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:26,973 INFO sent  {"temperature": 41.82, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:29,125 INFO sent  {"temperature": 41.96, "heartRate": 0, "ir": 763, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:31,174 INFO sent  {"temperature": 42.1, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:33,220 INFO sent  {"temperature": 41.68, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:35,248 INFO sent  {"temperature": 41.71, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:37,418 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:39,364 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:41,514 INFO sent  {"temperature": 42.69, "heartRate": 0, "ir": 762, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:43,665 INFO sent  {"temperature": 41.99, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:45,742 INFO sent  {"temperature": 41.93, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:47,965 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:50,013 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:52,164 INFO sent  {"temperature": 41.96, "heartRate": 0, "ir": 742, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:54,109 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:56,157 INFO sent  {"temperature": 41.9, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:15:58,308 INFO sent  {"temperature": 41.96, "heartRate": 0, "ir": 764, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:00,663 INFO sent  {"temperature": 41.76, "heartRate": 0, "ir": 737, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:02,793 INFO sent  {"temperature": 41.9, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:04,861 INFO sent  {"temperature": 42.57, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:07,011 INFO sent  {"temperature": 42.15, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:09,059 INFO sent  {"temperature": 43.05, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:11,107 INFO sent  {"temperature": 41.68, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:13,257 INFO sent  {"temperature": 42.18, "heartRate": 0, "ir": 742, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:15,306 INFO sent  {"temperature": 42.49, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:17,456 INFO sent  {"temperature": 41.82, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:19,606 INFO sent  {"temperature": 41.74, "heartRate": 0, "ir": 763, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:21,757 INFO sent  {"temperature": 41.54, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:23,907 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:26,140 INFO sent  {"temperature": 41.9, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:28,309 INFO sent  {"temperature": 42.01, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:30,358 INFO sent  {"temperature": 42.13, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:32,406 INFO sent  {"temperature": 42.35, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:34,454 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:36,502 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 762, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:38,637 INFO sent  {"temperature": 41.93, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:40,700 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:42,748 INFO sent  {"temperature": 41.63, "heartRate": 0, "ir": 734, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:44,898 INFO sent  {"temperature": 41.9, "heartRate": 0, "ir": 738, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:46,948 INFO sent  {"temperature": 41.99, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:49,098 INFO sent  {"temperature": 41.79, "heartRate": 0, "ir": 741, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:51,228 INFO sent  {"temperature": 41.99, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:53,501 INFO sent  {"temperature": 41.76, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:55,651 INFO sent  {"temperature": 41.74, "heartRate": 0, "ir": 765, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:57,597 INFO sent  {"temperature": 41.76, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:16:59,746 INFO sent  {"temperature": 41.65, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:02,101 INFO sent  {"temperature": 41.63, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:04,252 INFO sent  {"temperature": 41.68, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:06,300 INFO sent  {"temperature": 41.65, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:08,374 INFO sent  {"temperature": 41.99, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:10,498 INFO sent  {"temperature": 41.68, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:12,732 INFO sent  {"temperature": 41.71, "heartRate": 0, "ir": 762, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:14,901 INFO sent  {"temperature": 41.49, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:17,052 INFO sent  {"temperature": 41.16, "heartRate": 0, "ir": 782, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:19,201 INFO sent  {"temperature": 41.21, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:21,147 INFO sent  {"temperature": 41.49, "heartRate": 0, "ir": 771, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:23,195 INFO sent  {"temperature": 41.49, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:25,243 INFO sent  {"temperature": 41.52, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:28,315 INFO sent  {"temperature": 41.6, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:30,363 INFO sent  {"temperature": 41.71, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:32,513 INFO sent  {"temperature": 41.49, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:34,562 INFO sent  {"temperature": 41.65, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:36,692 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 741, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:38,843 INFO sent  {"temperature": 41.6, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:41,012 INFO sent  {"temperature": 41.79, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:43,163 INFO sent  {"temperature": 41.93, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:45,313 INFO sent  {"temperature": 41.85, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:47,366 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:49,410 INFO sent  {"temperature": 41.9, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:51,541 INFO sent  {"temperature": 41.93, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:53,634 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:55,758 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:17:57,907 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:00,058 INFO sent  {"temperature": 41.71, "heartRate": 0, "ir": 746, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:02,209 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:04,360 INFO sent  {"temperature": 41.99, "heartRate": 0, "ir": 741, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:06,510 INFO sent  {"temperature": 41.79, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:08,660 INFO sent  {"temperature": 41.65, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:10,810 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 746, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:12,858 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 740, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:15,008 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:17,159 INFO sent  {"temperature": 41.82, "heartRate": 0, "ir": 739, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:19,207 INFO sent  {"temperature": 41.65, "heartRate": 0, "ir": 763, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:21,255 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 744, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:23,401 INFO sent  {"temperature": 41.87, "heartRate": 0, "ir": 761, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:25,556 INFO sent  {"temperature": 41.71, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:27,706 INFO sent  {"temperature": 41.85, "heartRate": 0, "ir": 763, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:29,754 INFO sent  {"temperature": 41.9, "heartRate": 0, "ir": 739, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:31,802 INFO sent  {"temperature": 41.76, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:33,933 INFO sent  {"temperature": 41.99, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:36,002 INFO sent  {"temperature": 41.82, "heartRate": 0, "ir": 755, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:38,150 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:40,198 INFO sent  {"temperature": 41.79, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:42,144 INFO sent  {"temperature": 42.04, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:44,191 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:46,239 INFO sent  {"temperature": 42.13, "heartRate": 0, "ir": 735, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:48,391 INFO sent  {"temperature": 42.13, "heartRate": 0, "ir": 739, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:50,438 INFO sent  {"temperature": 41.82, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:52,383 INFO sent  {"temperature": 42.27, "heartRate": 0, "ir": 748, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:54,534 INFO sent  {"temperature": 42.21, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:56,684 INFO sent  {"temperature": 42.32, "heartRate": 0, "ir": 739, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:18:58,733 INFO sent  {"temperature": 42.6, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:00,778 INFO sent  {"temperature": 42.15, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:03,135 INFO sent  {"temperature": 42.38, "heartRate": 0, "ir": 764, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:05,286 INFO sent  {"temperature": 42.35, "heartRate": 0, "ir": 746, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:07,212 INFO sent  {"temperature": 42.38, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:09,279 INFO sent  {"temperature": 42.49, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:11,431 INFO sent  {"temperature": 42.24, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:13,684 INFO sent  {"temperature": 42.41, "heartRate": 0, "ir": 742, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:15,649 INFO sent  {"temperature": 42.97, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:17,778 INFO sent  {"temperature": 42.27, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:19,910 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:21,976 INFO sent  {"temperature": 42.1, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:24,005 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:26,175 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:28,252 INFO sent  {"temperature": 42.83, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:30,373 INFO sent  {"temperature": 42.63, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:32,319 INFO sent  {"temperature": 42.07, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:34,287 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 745, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:36,313 INFO sent  {"temperature": 42.63, "heartRate": 0, "ir": 757, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:38,465 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:40,613 INFO sent  {"temperature": 42.32, "heartRate": 0, "ir": 749, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:42,661 INFO sent  {"temperature": 41.93, "heartRate": 0, "ir": 759, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:44,709 INFO sent  {"temperature": 42.32, "heartRate": 0, "ir": 739, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:46,759 INFO sent  {"temperature": 42.43, "heartRate": 0, "ir": 746, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:48,805 INFO sent  {"temperature": 42.24, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:50,955 INFO sent  {"temperature": 42.1, "heartRate": 0, "ir": 768, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:53,015 INFO sent  {"temperature": 41.74, "heartRate": 0, "ir": 735, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:55,154 INFO sent  {"temperature": 42.27, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:57,123 INFO sent  {"temperature": 42.21, "heartRate": 0, "ir": 746, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:19:59,249 INFO sent  {"temperature": 42.18, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:01,401 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 745, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:03,652 INFO sent  {"temperature": 41.79, "heartRate": 0, "ir": 753, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:05,803 INFO sent  {"temperature": 42.32, "heartRate": 0, "ir": 743, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:07,934 INFO sent  {"temperature": 42.32, "heartRate": 0, "ir": 751, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:10,003 INFO sent  {"temperature": 42.43, "heartRate": 0, "ir": 745, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:12,156 INFO sent  {"temperature": 42.32, "heartRate": 0, "ir": 744, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:14,302 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 756, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:16,965 INFO sent  {"temperature": 42.46, "heartRate": 0, "ir": 744, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:19,012 INFO sent  {"temperature": 42.55, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:21,163 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 763, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:23,210 INFO sent  {"temperature": 42.38, "heartRate": 0, "ir": 767, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:25,361 INFO sent  {"temperature": 42.6, "heartRate": 0, "ir": 747, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:27,511 INFO sent  {"temperature": 42.49, "heartRate": 0, "ir": 750, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:29,662 INFO sent  {"temperature": 42.52, "heartRate": 0, "ir": 765, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:31,812 INFO sent  {"temperature": 42.63, "heartRate": 0, "ir": 760, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:33,963 INFO sent  {"temperature": 42.71, "heartRate": 0, "ir": 741, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:36,011 INFO sent  {"temperature": 42.01, "heartRate": 0, "ir": 752, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:38,058 INFO sent  {"temperature": 42.88, "heartRate": 0, "ir": 758, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:40,111 INFO sent  {"temperature": 42.66, "heartRate": 0, "ir": 754, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
+2026-08-03 19:20:40,123 ERROR Serial error: ClearCommError failed (PermissionError(13, 'Access is denied.', None, 5)). Reconnecting in 3s...
+2026-08-03 19:20:43,125 INFO Opening COM12 @ 115200
+2026-08-03 19:20:43,135 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:20:46,136 INFO Opening COM12 @ 115200
+2026-08-03 19:20:46,146 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:20:49,148 INFO Opening COM12 @ 115200
+2026-08-03 19:20:49,157 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:20:52,158 INFO Opening COM12 @ 115200
+2026-08-03 19:20:52,160 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:20:55,162 INFO Opening COM12 @ 115200
+2026-08-03 19:20:55,171 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:20:58,173 INFO Opening COM12 @ 115200
+2026-08-03 19:20:58,182 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:01,183 INFO Opening COM12 @ 115200
+2026-08-03 19:21:01,193 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:04,194 INFO Opening COM12 @ 115200
+2026-08-03 19:21:04,204 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:07,206 INFO Opening COM12 @ 115200
+2026-08-03 19:21:07,215 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:10,216 INFO Opening COM12 @ 115200
+2026-08-03 19:21:10,226 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:13,227 INFO Opening COM12 @ 115200
+2026-08-03 19:21:13,238 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:16,239 INFO Opening COM12 @ 115200
+2026-08-03 19:21:16,248 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:19,250 INFO Opening COM12 @ 115200
+2026-08-03 19:21:19,260 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:22,261 INFO Opening COM12 @ 115200
+2026-08-03 19:21:22,270 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:25,272 INFO Opening COM12 @ 115200
+2026-08-03 19:21:25,282 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:28,283 INFO Opening COM12 @ 115200
+2026-08-03 19:21:28,292 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:31,294 INFO Opening COM12 @ 115200
+2026-08-03 19:21:31,303 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:34,304 INFO Opening COM12 @ 115200
+2026-08-03 19:21:34,313 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:37,315 INFO Opening COM12 @ 115200
+2026-08-03 19:21:37,325 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:40,326 INFO Opening COM12 @ 115200
+2026-08-03 19:21:40,335 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:43,337 INFO Opening COM12 @ 115200
+2026-08-03 19:21:43,346 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:46,348 INFO Opening COM12 @ 115200
+2026-08-03 19:21:46,357 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:49,359 INFO Opening COM12 @ 115200
+2026-08-03 19:21:49,360 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:52,361 INFO Opening COM12 @ 115200
+2026-08-03 19:21:52,370 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:55,372 INFO Opening COM12 @ 115200
+2026-08-03 19:21:55,382 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:21:58,383 INFO Opening COM12 @ 115200
+2026-08-03 19:21:58,392 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:01,393 INFO Opening COM12 @ 115200
+2026-08-03 19:22:01,402 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:04,404 INFO Opening COM12 @ 115200
+2026-08-03 19:22:04,414 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:07,415 INFO Opening COM12 @ 115200
+2026-08-03 19:22:07,424 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:10,426 INFO Opening COM12 @ 115200
+2026-08-03 19:22:10,435 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:13,436 INFO Opening COM12 @ 115200
+2026-08-03 19:22:13,446 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:16,448 INFO Opening COM12 @ 115200
+2026-08-03 19:22:16,457 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:19,458 INFO Opening COM12 @ 115200
+2026-08-03 19:22:19,468 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:22,469 INFO Opening COM12 @ 115200
+2026-08-03 19:22:22,478 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:25,480 INFO Opening COM12 @ 115200
+2026-08-03 19:22:25,489 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:28,491 INFO Opening COM12 @ 115200
+2026-08-03 19:22:28,501 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:31,502 INFO Opening COM12 @ 115200
+2026-08-03 19:22:31,511 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:34,512 INFO Opening COM12 @ 115200
+2026-08-03 19:22:34,521 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:37,523 INFO Opening COM12 @ 115200
+2026-08-03 19:22:37,532 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:40,534 INFO Opening COM12 @ 115200
+2026-08-03 19:22:40,543 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:43,545 INFO Opening COM12 @ 115200
+2026-08-03 19:22:43,554 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:46,555 INFO Opening COM12 @ 115200
+2026-08-03 19:22:46,558 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:49,560 INFO Opening COM12 @ 115200
+2026-08-03 19:22:49,570 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:52,572 INFO Opening COM12 @ 115200
+2026-08-03 19:22:52,581 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:55,582 INFO Opening COM12 @ 115200
+2026-08-03 19:22:55,591 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:22:58,593 INFO Opening COM12 @ 115200
+2026-08-03 19:22:58,602 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:01,603 INFO Opening COM12 @ 115200
+2026-08-03 19:23:01,613 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:04,615 INFO Opening COM12 @ 115200
+2026-08-03 19:23:04,624 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:07,626 INFO Opening COM12 @ 115200
+2026-08-03 19:23:07,635 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:10,637 INFO Opening COM12 @ 115200
+2026-08-03 19:23:10,646 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:13,648 INFO Opening COM12 @ 115200
+2026-08-03 19:23:13,657 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:16,658 INFO Opening COM12 @ 115200
+2026-08-03 19:23:16,668 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:19,670 INFO Opening COM12 @ 115200
+2026-08-03 19:23:19,679 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:22,681 INFO Opening COM12 @ 115200
+2026-08-03 19:23:22,691 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:25,692 INFO Opening COM12 @ 115200
+2026-08-03 19:23:25,701 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:28,703 INFO Opening COM12 @ 115200
+2026-08-03 19:23:28,713 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:31,714 INFO Opening COM12 @ 115200
+2026-08-03 19:23:31,724 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:34,726 INFO Opening COM12 @ 115200
+2026-08-03 19:23:34,734 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:37,736 INFO Opening COM12 @ 115200
+2026-08-03 19:23:37,745 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:40,747 INFO Opening COM12 @ 115200
+2026-08-03 19:23:40,748 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:43,749 INFO Opening COM12 @ 115200
+2026-08-03 19:23:43,752 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:46,753 INFO Opening COM12 @ 115200
+2026-08-03 19:23:46,756 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:49,757 INFO Opening COM12 @ 115200
+2026-08-03 19:23:49,766 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:52,768 INFO Opening COM12 @ 115200
+2026-08-03 19:23:52,771 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:55,773 INFO Opening COM12 @ 115200
+2026-08-03 19:23:55,783 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:23:58,784 INFO Opening COM12 @ 115200
+2026-08-03 19:23:58,794 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:01,796 INFO Opening COM12 @ 115200
+2026-08-03 19:24:01,805 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:04,807 INFO Opening COM12 @ 115200
+2026-08-03 19:24:04,816 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:07,818 INFO Opening COM12 @ 115200
+2026-08-03 19:24:07,827 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:10,829 INFO Opening COM12 @ 115200
+2026-08-03 19:24:10,838 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:13,840 INFO Opening COM12 @ 115200
+2026-08-03 19:24:13,841 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:16,842 INFO Opening COM12 @ 115200
+2026-08-03 19:24:16,851 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:19,853 INFO Opening COM12 @ 115200
+2026-08-03 19:24:19,862 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:22,864 INFO Opening COM12 @ 115200
+2026-08-03 19:24:22,873 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:25,874 INFO Opening COM12 @ 115200
+2026-08-03 19:24:25,884 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:28,885 INFO Opening COM12 @ 115200
+2026-08-03 19:24:28,895 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:31,897 INFO Opening COM12 @ 115200
+2026-08-03 19:24:31,906 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:34,908 INFO Opening COM12 @ 115200
+2026-08-03 19:24:34,917 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:37,918 INFO Opening COM12 @ 115200
+2026-08-03 19:24:37,927 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:40,929 INFO Opening COM12 @ 115200
+2026-08-03 19:24:40,938 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:43,940 INFO Opening COM12 @ 115200
+2026-08-03 19:24:43,948 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:46,950 INFO Opening COM12 @ 115200
+2026-08-03 19:24:46,959 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:49,961 INFO Opening COM12 @ 115200
+2026-08-03 19:24:49,970 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:52,971 INFO Opening COM12 @ 115200
+2026-08-03 19:24:52,981 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:55,982 INFO Opening COM12 @ 115200
+2026-08-03 19:24:55,991 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:24:58,993 INFO Opening COM12 @ 115200
+2026-08-03 19:24:59,002 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:02,004 INFO Opening COM12 @ 115200
+2026-08-03 19:25:02,013 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:05,014 INFO Opening COM12 @ 115200
+2026-08-03 19:25:05,024 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:08,026 INFO Opening COM12 @ 115200
+2026-08-03 19:25:08,035 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:11,037 INFO Opening COM12 @ 115200
+2026-08-03 19:25:11,045 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:14,047 INFO Opening COM12 @ 115200
+2026-08-03 19:25:14,056 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:17,057 INFO Opening COM12 @ 115200
+2026-08-03 19:25:17,066 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:20,067 INFO Opening COM12 @ 115200
+2026-08-03 19:25:20,076 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:23,078 INFO Opening COM12 @ 115200
+2026-08-03 19:25:23,088 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:26,090 INFO Opening COM12 @ 115200
+2026-08-03 19:25:26,091 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:29,093 INFO Opening COM12 @ 115200
+2026-08-03 19:25:29,103 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:32,105 INFO Opening COM12 @ 115200
+2026-08-03 19:25:32,115 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:35,116 INFO Opening COM12 @ 115200
+2026-08-03 19:25:35,126 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:38,127 INFO Opening COM12 @ 115200
+2026-08-03 19:25:38,137 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:41,138 INFO Opening COM12 @ 115200
+2026-08-03 19:25:41,140 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:44,141 INFO Opening COM12 @ 115200
+2026-08-03 19:25:44,150 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:47,152 INFO Opening COM12 @ 115200
+2026-08-03 19:25:47,161 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:50,163 INFO Opening COM12 @ 115200
+2026-08-03 19:25:50,172 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:53,173 INFO Opening COM12 @ 115200
+2026-08-03 19:25:53,182 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:56,183 INFO Opening COM12 @ 115200
+2026-08-03 19:25:56,193 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:25:59,195 INFO Opening COM12 @ 115200
+2026-08-03 19:25:59,204 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:02,205 INFO Opening COM12 @ 115200
+2026-08-03 19:26:02,215 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:05,217 INFO Opening COM12 @ 115200
+2026-08-03 19:26:05,226 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:08,227 INFO Opening COM12 @ 115200
+2026-08-03 19:26:08,237 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:11,238 INFO Opening COM12 @ 115200
+2026-08-03 19:26:11,248 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:14,249 INFO Opening COM12 @ 115200
+2026-08-03 19:26:14,258 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:17,260 INFO Opening COM12 @ 115200
+2026-08-03 19:26:17,270 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:20,272 INFO Opening COM12 @ 115200
+2026-08-03 19:26:20,280 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:23,282 INFO Opening COM12 @ 115200
+2026-08-03 19:26:23,292 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:26,293 INFO Opening COM12 @ 115200
+2026-08-03 19:26:26,303 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:29,305 INFO Opening COM12 @ 115200
+2026-08-03 19:26:29,314 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:32,316 INFO Opening COM12 @ 115200
+2026-08-03 19:26:32,325 ERROR Serial error: could not open port 'COM12': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2). Reconnecting in 3s...
+2026-08-03 19:26:35,326 INFO Opening COM12 @ 115200
+2026-08-03 19:26:37,475 INFO sent  {"temperature": 44.26, "heartRate": 0, "ir": 745, "sleepScore": 100, "stressScore": 35, "currentStatus": "NORMAL/CALM", "depressionRisk": "LOW RISK"}
