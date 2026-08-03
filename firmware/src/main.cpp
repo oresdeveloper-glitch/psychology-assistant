@@ -1,182 +1,170 @@
 #include <Arduino.h>
 #include <WiFi.h>
+#include <WebServer.h>
 #include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-#include <DHT.h>
-#include <PubSubClient.h>
+#include "MAX30105.h"
+#include "heartRate.h"
 
-#define WIFI_SSID "Wokwi-GUEST"
-#define WIFI_PASS ""
+// --- Network Configuration ---
+const char* ssid = "ESP32_Health_Test";
+const char* password = "password123"; // Must be at least 8 characters
 
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 64
-#define OLED_RESET -1
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+WebServer server(80);
+MAX30105 particleSensor;
 
-#define DHTPIN 15
-#define DHTTYPE DHT22
-DHT dht(DHTPIN, DHTTYPE);
+// --- Thermistor Configuration ---
+const int thermistorPin = 34;
+const float R_REF = 10000.0;           // 10k Ohm series resistor
+const float NOMINAL_RESISTANCE = 10000.0; // Thermistor resistance at 25 degrees C
+const float NOMINAL_TEMP = 25.0;
+const float B_COEFFICIENT = 3950.0;    // Beta coefficient of the thermistor
 
-#define POT_HEART 34
-#define POT_SLEEP 35
+// --- Heart Rate Variables ---
+const byte RATE_SIZE = 4;
+byte rates[RATE_SIZE];
+byte rateSpot = 0;
+long lastBeat = 0;
+float beatsPerMinute;
+int beatAvg = 0;
 
-const char* mqttServer = "broker.emqx.io";
-const int mqttPort = 1883;
-const char* mqttTopic = "khairaty/sensor/esp32";
-const char* clientId = "khairaty_esp32";
+// --- Sensor Readings ---
+float currentTempC = 0.0;
+long irValue = 0;
 
-WiFiClient wifiClient;
-PubSubClient mqttClient(wifiClient);
-
-int cs(float t, int hr, int sl);
-String cls(int s);
-String rsk(int sl, int hr);
+// --- Web Page HTML/JS ---
+const char index_html[] PROGMEM = R"rawliteral(
+<!DOCTYPE HTML><html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESP32 Health Monitor</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 40px; background: #f4f4f9; color: #333;}
+    .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1); display: inline-block; margin: 10px; width: 220px;}
+    h1 { color: #2c3e50; }
+    h2 { margin: 10px 0 0 0; font-size: 2.5em; color: #e74c3c; }
+    p { margin: 0; font-size: 1.2em; color: #7f8c8d; font-weight: bold;}
+  </style>
+</head>
+<body>
+  <h1>Sensor Dashboard</h1>
+  <div class="card">
+    <p>Heart Rate</p>
+    <h2><span id="bpm">0</span> <span style="font-size:0.4em; color:#7f8c8d;">BPM</span></h2>
+  </div>
+  <div class="card">
+    <p>Temperature</p>
+    <h2><span id="temp">0.0</span> <span style="font-size:0.4em; color:#7f8c8d;">&deg;C</span></h2>
+  </div>
+  <div class="card">
+    <p>Raw IR (Finger Detect)</p>
+    <h2 style="color: #3498db;"><span id="ir">0</span></h2>
+  </div>
+  <script>
+    setInterval(function() {
+      fetch('/data')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('bpm').innerText = data.bpm;
+          document.getElementById('temp').innerText = data.temp.toFixed(1);
+          document.getElementById('ir').innerText = data.ir;
+        });
+    }, 1000);
+  </script>
+</body>
+</html>
+)rawliteral";
 
 void setup() {
   Serial.begin(115200);
-  randomSeed(analogRead(0));
-  dht.begin();
+
+  Serial.println("\nStarting Access Point...");
+  WiFi.softAP(ssid, password);
+  IPAddress IP = WiFi.softAPIP();
+  Serial.print("Connect to Wi-Fi network: ");
+  Serial.println(ssid);
+  Serial.print("Dashboard IP address: ");
+  Serial.println(IP);
+
+  server.on("/", []() {
+    server.send(200, "text/html", index_html);
+  });
+
+  server.on("/data", []() {
+    String json = "{";
+    json += "\"bpm\":" + String(beatAvg) + ",";
+    json += "\"temp\":" + String(currentTempC) + ",";
+    json += "\"ir\":" + String(irValue);
+    json += "}";
+    server.send(200, "application/json", json);
+  });
+
+  server.begin();
+  Serial.println("HTTP server started.");
+
   Wire.begin(21, 22);
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-  display.clearDisplay();
-  display.setTextColor(SSD1306_WHITE);
-  display.setTextSize(1);
-  display.setCursor(0, 0);
-  display.println("WiFi...");
-  display.display();
 
-  Serial.print("WiFi");
-  WiFi.mode(WIFI_STA);
-  WiFi.setSleep(false);
-  WiFi.begin(WIFI_SSID, WIFI_PASS);
-  int a = 0;
-  while (WiFi.status() != WL_CONNECTED && a < 100) { delay(500); Serial.print("."); a++; }
-
-  display.clearDisplay();
-  display.setCursor(0, 0);
-  if (WiFi.status() == WL_CONNECTED) {
-    Serial.println(" OK");
-    display.println("WiFi OK");
-    display.print("IP: "); display.println(WiFi.localIP());
-    Serial.print("IP: "); Serial.println(WiFi.localIP());
-
-    mqttClient.setServer(mqttServer, mqttPort);
-    Serial.print("MQTT");
-    int b = 0;
-    while (!mqttClient.connected() && b < 20) {
-      if (mqttClient.connect(clientId)) {
-        Serial.println(" OK");
-        display.println("MQTT OK");
-      } else {
-        Serial.print(".");
-        delay(500);
-        b++;
-      }
-    }
-    if (!mqttClient.connected()) {
-      Serial.println(" FAIL");
-      display.println("MQTT FAIL");
-    }
-  } else {
-    Serial.print(" FAIL after "); Serial.print(a); Serial.println(" tries");
-    display.println("WiFi FAIL");
+  if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) {
+    Serial.println("MAX30102 not found. Check wiring/power.");
+    while (1);
   }
-  display.display();
+  Serial.println("MAX30102 initialized.");
+
+  particleSensor.setup();
+  particleSensor.setPulseAmplitudeRed(0x0A);
+  particleSensor.setPulseAmplitudeGreen(0);
 }
+
+static unsigned long lastPrint = 0;
 
 void loop() {
-  if (WiFi.status() != WL_CONNECTED) {
-    Serial.println("WiFi down");
-    WiFi.mode(WIFI_STA);
-    WiFi.setSleep(false);
-    WiFi.begin(WIFI_SSID, WIFI_PASS);
-    int a = 0;
-    while (WiFi.status() != WL_CONNECTED && a < 60) { delay(500); a++; }
-    if (WiFi.status() != WL_CONNECTED) {
-      display.clearDisplay(); display.setCursor(0,0);
-      display.println("WiFi FAIL"); display.display();
-      delay(2000);
-      return;
-    }
-    Serial.println("WiFi reconnected");
+  server.handleClient();
+
+  int adcValue = analogRead(thermistorPin);
+  if (adcValue > 0) {
+    float voltage = adcValue * (3.3 / 4095.0);
+    float resistance = R_REF * ((3.3 / voltage) - 1.0);
+
+    float steinhart = resistance / NOMINAL_RESISTANCE;
+    steinhart = log(steinhart);
+    steinhart /= B_COEFFICIENT;
+    steinhart += 1.0 / (NOMINAL_TEMP + 273.15);
+    steinhart = 1.0 / steinhart;
+    currentTempC = steinhart - 273.15;
   }
 
-  if (!mqttClient.connected()) {
-    Serial.print("MQTT reconnect");
-    int b = 0;
-    while (!mqttClient.connected() && b < 20) {
-      if (mqttClient.connect(clientId)) {
-        Serial.println(" OK");
-      } else {
-        Serial.print(".");
-        delay(500);
-        b++;
+  irValue = particleSensor.getIR();
+
+  if (checkForBeat(irValue) == true) {
+    long delta = millis() - lastBeat;
+    lastBeat = millis();
+
+    beatsPerMinute = 60 / (delta / 1000.0);
+
+    if (beatsPerMinute < 255 && beatsPerMinute > 20) {
+      rates[rateSpot++] = (byte)beatsPerMinute;
+      rateSpot %= RATE_SIZE;
+
+      beatAvg = 0;
+      for (byte x = 0; x < RATE_SIZE; x++) {
+        beatAvg += rates[x];
       }
-    }
-    if (!mqttClient.connected()) {
-      Serial.println(" FAIL");
-      delay(2000);
-      return;
+      beatAvg /= RATE_SIZE;
     }
   }
 
-  float t = dht.readTemperature();
-  if (isnan(t)) t = 25.0;
-
-  int potHeart = analogRead(POT_HEART);
-  int potSleep = analogRead(POT_SLEEP);
-
-  int hr = map(potHeart, 0, 4095, 55, 100);
-  int sl = map(potSleep, 0, 4095, 60, 100);
-  int ss = cs(t, hr, sl);
-
-  static unsigned long lastPub = 0;
-  if (millis() - lastPub > 50) {
-    lastPub = millis();
-
-    String payload = "{\"temperature\":" + String(t,1) + ",\"heartRate\":" + String(hr) +
-                     ",\"sleepScore\":" + String(sl) + ",\"stressScore\":" + String(ss) +
-                     ",\"currentStatus\":\"" + cls(ss) +
-                     "\",\"depressionRisk\":\"" + rsk(sl, hr) + "\"}";
-
-    Serial.print("MQTT pub len="); Serial.println(payload.length());
-    bool ok = mqttClient.publish(mqttTopic, payload.c_str());
-    Serial.print("publish()="); Serial.println(ok ? "OK" : "FAIL");
-    mqttClient.loop();
+  if (irValue < 50000) {
+    beatAvg = 0;
   }
 
-  display.clearDisplay();
-  display.setTextSize(1);
-  display.setCursor(0, 0);
-  display.print("T:"); display.print(t,1); display.print(" HR:"); display.println(hr);
-  display.print("Sleep:"); display.print(sl); display.print(" Stress:"); display.println(ss);
-  display.print(cls(ss)); display.print(" "); display.println(rsk(sl, hr));
-  display.setTextSize(2);
-  display.setCursor(0, 48);
-  display.print("SENT");
-  display.display();
-
-  delay(10);
-}
-
-int cs(float t, int hr, int sl) {
-  int s = 0;
-  if (hr < 75) s += 10; else if (hr < 95) s += 30; else if (hr < 110) s += 50; else s += 70;
-  if (t >= 24 && t <= 28) s += 5; else if (t > 28 && t <= 31) s += 15; else s += 25;
-  if (sl >= 70) s -= 10; else if (sl >= 40) s += 10; else s += 25;
-  return constrain(s, 0, 100);
-}
-
-String cls(int s) {
-  if (s < 40) return "NORMAL/CALM";
-  if (s < 70) return "MODERATE";
-  return "STRESS";
-}
-
-String rsk(int sl, int hr) {
-  int r = 0;
-  if (sl < 40) r += 60; else if (sl < 70) r += 30; else r += 10;
-  if (hr > 105) r += 25; else if (hr > 90) r += 10;
-  return r >= 60 ? "HIGH RISK" : "LOW RISK";
+  // Print a compact, parseable line to USB serial every second.
+  if (millis() - lastPrint > 1000) {
+    lastPrint = millis();
+    Serial.print("KHAIRATY:");
+    Serial.print(currentTempC, 2);
+    Serial.print(",");
+    Serial.print(beatAvg);
+    Serial.print(",");
+    Serial.print(irValue);
+    Serial.println();
+  }
 }
